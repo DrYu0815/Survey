@@ -8,7 +8,6 @@ A systematic review of techniques, challenges, and solutions for function callin
 Reproducibility is important! We prioritize methods with open-source implementations when possible.
 
 Please cite our survey paper if this index is helpful:
-
 ```bibtex
 @article{wang2025comprehensive,
   title={Comprehensive Reviews into Function Calling in Large Language Models: An Industrial Perspective},
