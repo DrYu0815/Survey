@@ -387,36 +387,52 @@ Please cite our survey paper if this index is helpful:
 | MTU-Bench | [MTU-Bench: A Multi-granularity Tool-Use Benchmark for Large Language Models](https://arxiv.org/abs/2410.11710) (Wang et al., 2024) | [Code](https://github.com/X-LANCE/MTU-Bench) | Multi-granularity tool-use evaluation |
 | WTU-EVAL | [Web tool use evaluation: Measuring large language models' capabilities on realistic web tasks](https://arxiv.org/abs/2310.03220) (Mishra et al., 2023) | [Code](https://github.com/gpt-tool-use/WTU-Eval) | Web-based tool usage evaluation framework |
 
-## Industry Products
 
-### Commercial Platforms
-| Name | Documentation | Description |
-|------|---------------|-------------|
-| ChatGPT plugins | [Documentation](https://platform.openai.com/docs/plugins/introduction) | Extends ChatGPT with external application access |
-| Claude's tool use | [Documentation](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) | Controlled interactions with external functions |
-| Cohere Command | [Documentation](https://docs.cohere.com/docs/command-r-plus) | Command R+ with function calling capabilities |
-| Qwen | [Documentation](https://qwen.readthedocs.io/en/latest/framework/function_call.html) | Open-source models with function calling support |
+### Industry Products
 
-### Development Frameworks and SDKs
-| Name | Documentation | Code | Description |
-|------|---------------|------|-------------|
-| HuggingFace Transformer Agents | [Documentation](https://huggingface.co/docs/transformers/transformers_agents) | [Code](https://github.com/huggingface/transformers) | Multimodal task integration for LLMs |
-| Semantic Kernel | [Documentation](https://learn.microsoft.com/en-us/semantic-kernel/overview/) | [Code](https://github.com/microsoft/semantic-kernel) | Integrates LLMs with conventional programming languages |
-| LangChain | [Documentation](https://python.langchain.com/docs/get_started/introduction) | [Code](https://github.com/langchain-ai/langchain) | Framework for LLM-powered applications |
+#### Commercial Platforms
+| Name | Organization | Release/Paper | Description |
+|------|--------------|---------------|-------------|
+| ChatGPT plugins | OpenAI | [Introducing ChatGPT plugins](https://openai.com/blog/chatgpt-plugins) | Ecosystem of third-party extensions for specific functionalities |
+| Claude's tool use API | Anthropic | [Claude 3 Opus technical report](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Claude_3_Opus_Technical_Report.pdf) | Native function calling capabilities in Claude AI models |
+| Cohere Command | Cohere | [Introducing Cohere Command Light](https://txt.cohere.com/command-light/) | API for function calling and structured JSON responses |
+| Qwen | Alibaba | [Qwen Technical Report](https://arxiv.org/abs/2309.16609) (Yang et al., 2023) | Multi-function Chinese language models with tool usage |
+| DeepSeek | DeepSeek | [DeepSeek: Generalized Autoregressive Pretraining for Language and Vision](https://arxiv.org/abs/2405.04434) (Dai et al., 2024) | Generalized foundation model with capabilities across tasks |
 
-### Autonomous Agent Systems
-| Name | Documentation | Code | Description |
-|------|---------------|------|-------------|
-| Auto-GPT | [Documentation](https://docs.agpt.co/) | [Code](https://github.com/Significant-Gravitas/AutoGPT) | Autonomous LLM for complex tasks with minimal input |
-| BabyAGI | [Documentation](https://github.com/yoheinakajima/babyagi#readme) | [Code](https://github.com/yoheinakajima/babyagi) | Task management with minimal oversight |
-| BMTools | [Documentation](https://github.com/OpenBMB/BMTools#readme) | [Code](https://github.com/OpenBMB/BMTools) | Community-driven tool integration platform |
+#### Frameworks & SDKs
+| Name | Organization | Repository | Description |
+|------|--------------|------------|-------------|
+| HuggingFace Transformer Agents | Hugging Face | [Code](https://github.com/huggingface/transformers-agents) | Framework for building agents with Hugging Face models |
+| Semantic Kernel | Microsoft | [Code](https://github.com/microsoft/semantic-kernel) | SDK for building AI applications with native tool integration |
+| LangChain | LangChain | [Code](https://github.com/langchain-ai/langchain) | Framework for building applications with LLMs and tools |
+| WebCPM | Tsinghua University | [Code](https://github.com/thunlp/WebCPM) | Chinese web agent framework with browsing capabilities |
 
-### Open Source Models
-| Name | Documentation | Code | Description |
-|------|---------------|------|-------------|
-| GRANITE-20B-FUNCTIONCALLING | [Model Card](https://huggingface.co/IBM/granite-20b-function-calling) | [Code](https://github.com/IBM/granite) | State-of-the-art open-source function calling model |
-| NexusRaven V2-13B | [Model Card](https://huggingface.co/Nexusflow/NexusRaven-V2-13B) | [Code](https://github.com/nexusflow/NexusRaven) | Specialized in cybersecurity tool and API invocation |
-| FireFunction V1 | [Model Card](https://huggingface.co/fireworks-ai/firefunction-v1) | - | Built on Mistral 7B with structured information generation |
+#### Autonomous Agent Systems
+| Name | Developer | Repository | Description |
+|------|-----------|------------|-------------|
+| Auto-GPT | Significant Gravitas | [Code](https://github.com/Significant-Gravitas/Auto-GPT) | Self-prompting autonomous agent system |
+| BabyAGI | Yohei | [Code](https://github.com/yoheinakajima/babyagi) | Task-driven autonomous agent framework |
+| BMTools | OpenBMB | [Code](https://github.com/OpenBMB/BMTools) | Toolset for enhancing language models with functions |
+| RestGPT | Microsoft | [Code](https://github.com/Yifan-Song793/RestGPT) | Model that can interact with RESTful APIs |
+| xLAM | Silen | [Code](https://github.com/xlang-ai/xlam) | Cross-language agent development framework |
+| Octopus-v4 | Baichuan | [Octopus technical report](https://arxiv.org/abs/2311.02269) (Hao et al., 2023) | Multi-agent system for complex task completion |
+
+#### Open Source Models
+| Name | Developer | Repository | Description |
+|------|-----------|------------|-------------|
+| GRANITE-20B | IBM Research | [Code](https://github.com/IBM/granite) | Large language model optimized for coding and tool use |
+| Mistral 7B | Mistral AI | [Code](https://github.com/mistralai/mistral-src) | Open-weight model with tool use capabilities |
+| NexusRaven V2-13B | Nexusflow | [Code](https://github.com/nexusflowai/NexusRaven) | Function calling and multi-modality specialized model |
+| Gorilla | UC Berkeley | [Code](https://github.com/ShishirPatil/gorilla) | Model specialized in API usage and integration |
+| FireFunction V1 | Fireworks AI | [Model](https://huggingface.co/fireworks-ai/firefunction-v1) | Purpose-built for function calling capabilities |
+| Nous Hermes 2 | Nous Research | [Model](https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO) | Instruction-tuned model with enhanced tool use |
+
+#### Training Resources & Datasets
+| Name | Organization | Link | Description |
+|------|--------------|------|-------------|
+| AgentInstruct | Microsoft | [Paper](https://arxiv.org/abs/2312.03791) (Zeng et al., 2023) | Instruction dataset for agent training and evaluation |
+| AgentOhana | Duke University | [Paper](https://arxiv.org/abs/2403.01092) (Yang et al., 2024) | High-quality dataset for training multi-task agents |
+| Lumos | Cornell University | [Paper](https://arxiv.org/abs/2311.05657) (Guo et al., 2023) | Multi-step reasoning dataset for tool-based tasks |
 
 ## Open Issues
 
