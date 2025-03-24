@@ -64,6 +64,10 @@ Function calling capabilities in LLMs follow a three-stage workflow consisting o
 | Challenge 4.4: Execution Failure | Functions failing despite correct triggering and parameterization |
 
 
+![Illustration of the fine-tuning process for function calling capabilities in large language models, showing the progression from training data preparation through model training to evaluation.](./figures/training.jpg)
+
+The training process involves specialized data preparation and fine-tuning strategies to equip models with function calling capabilities while maintaining general language understanding.
+
 ## Sample Construction and Fine-Tuning
 
 ### Function Collection
