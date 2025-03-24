@@ -28,7 +28,7 @@ Please cite our survey paper if this index is helpful.
 - [Evaluation](#evaluation)
 - [Industry Products](#industry-products)
 - [Open Issues and Future Directions](#open-issues-and-future-directions)
-```
+
 
 ## Challenges in Function Calling
 
