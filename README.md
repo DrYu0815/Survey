@@ -34,6 +34,7 @@ Please cite our survey paper if this index is helpful:
 Function calling capabilities in LLMs follow a three-stage workflow consisting of pre-call processing, on-call execution, and post-call validation.
 
 
+
 ## Challenges
 
 ### Pre-call Stage
@@ -343,6 +344,12 @@ Function mapping plays a crucial role in deploying function calling, primarily r
 ## Evaluation
 
 ### Overall Performance
+
+![Performance comparison across various models showing the relative effectiveness of different approaches on function calling tasks, highlighting the relationship between model architecture and function calling capabilities.](./figures/performance_comparison.jpg)
+
+The experimental results demonstrate clear performance differences between models trained specifically for function calling versus general-purpose models adapted to the task.
+
+
 
 #### Function Selection Metrics
 | Metric | Description | Example Works |
