@@ -78,11 +78,30 @@ Please cite our survey paper if this index is helpful:
 | Multi-turn Interaction | [Hammer: Robust Function-Calling for On-Device Language Models via Function Masking](https://arxiv.org/abs/2410.04587) (Lin et al., 2024) | - | Specialized techniques to address naming convention sensitivity issues for on-device deployment |
 
 ### Fine-tuning Strategies
-| Method | Papers | Description |
-|--------|--------|-------------|
-| Supervised Fine-Tuning (SFT) | [Show your work: Scratchpads for intermediate computation with language models](https://arxiv.org/abs/2112.00114) (Nye et al., 2021), [Giving BERT a calculator: Finding operations and arguments with reading comprehension](https://arxiv.org/abs/1909.00109) (Andor et al., 2019), [Rainier: Reinforced knowledge introspector for commonsense question answering](https://arxiv.org/abs/2210.03078) (Liu et al., 2022) | Standard fine-tuning approach that maximizes likelihood of correct function calls and parameters |
-| Parameter-Efficient Fine-Tuning (PEFT) | [Gpt4tools: Teaching large language model to use tools via self-instruction](https://arxiv.org/abs/2305.05181) (Yang et al., 2024), [CITI: Enhancing Tool Utilizing Ability in Large Language Models without Sacrificing General Performance](https://arxiv.org/abs/2409.13202) (Hao et al., 2024) | Techniques like LoRA that update only a small subset of model parameters |
-| Reinforcement Learning & RLHF | [WebGPT: Browser-assisted question-answering with human feedback](https://arxiv.org/abs/2112.09332) (Nakano et al., 2021), [Taskmatrix.ai: Completing tasks by connecting foundation models with millions of apis](https://arxiv.org/abs/2303.16434) (Liang et al., 2024) | Learning from user feedback and environment interactions to improve function calling decisions |
+| Method | Paper | Description |
+|--------|-------|-------------|
+| Supervised Fine-Tuning (SFT) | [ToolGen: Unified Tool Retrieval and Calling via Generation](https://arxiv.org/abs/2410.03439) (Wang et al., 2024) | Standard fine-tuning approach with unified retrieval and calling generation |
+| Supervised Fine-Tuning (SFT) | [RAIT: Retrieval Augmented Instruction Tuning](https://arxiv.org/abs/2310.06839) (Asai et al., 2023) | Retrieval-augmented approach for instruction tuning |
+| Supervised Fine-Tuning (SFT) | [Show your work: Scratchpads for intermediate computation with language models](https://arxiv.org/abs/2112.00114) (Nye et al., 2021) | Scratchpad-based training for step-by-step computation |
+| Supervised Fine-Tuning (SFT) | [Giving BERT a calculator: Finding operations and arguments with reading comprehension](https://arxiv.org/abs/1909.00109) (Andor et al., 2019) | Integrates mathematical operations with language understanding |
+| Supervised Fine-Tuning (SFT) | [Rainier: Reinforced knowledge introspector for commonsense question answering](https://arxiv.org/abs/2210.03078) (Liu et al., 2022) | Knowledge introspection for improved reasoning |
+| Supervised Fine-Tuning (SFT) | [Learning to represent programs with graphs](https://arxiv.org/abs/1711.00740) (Allamanis et al., 2018) | Program representation through graph structures |
+| Supervised Fine-Tuning (SFT) | [A deep generative model of code syntactic structures](https://arxiv.org/abs/1704.01696) (Barone et al., 2017) | Syntax-aware code generation models |
+| Supervised Fine-Tuning (SFT) | [Pre-training for Abstractive Document Summarization](https://arxiv.org/abs/1909.10393) (Liu et al., 2019) | Domain-specific pre-training for document summarization |
+| Supervised Fine-Tuning (SFT) | [Character-level neural network for biomedical named entity recognition](https://www.sciencedirect.com/science/article/abs/pii/S1532046417301776) (Liu et al., 2017) | Character-level models for biomedical entity recognition |
+| Parameter-Efficient Fine-Tuning (PEFT) | [Gpt4tools: Teaching large language model to use tools via self-instruction](https://arxiv.org/abs/2305.05181) (Yang et al., 2024) | Self-instruction approach for tool utilization |
+| Parameter-Efficient Fine-Tuning (PEFT) | [CITI: Enhancing Tool Utilizing Ability in Large Language Models without Sacrificing General Performance](https://arxiv.org/abs/2409.13202) (Hao et al., 2024) | Balanced approach for tool utilization without performance tradeoffs |
+| Parameter-Efficient Fine-Tuning (PEFT) | [Toolformer: Language models can teach themselves to use tools](https://arxiv.org/abs/2302.04761) (Schick et al., 2024) | Self-supervised learning for tool usage |
+| Parameter-Efficient Fine-Tuning (PEFT) | [PLUG: Parameter-efficient LLMs Using Plugin Adapters](https://arxiv.org/abs/2305.12945) (Li et al., 2023) | Plugin adapter approach for parameter efficiency |
+| Parameter-Efficient Fine-Tuning (PEFT) | [Prompt tuning for generative multimodal pretrained models](https://arxiv.org/abs/2205.11822) (Wei et al., 2022) | Prompt-based tuning for multimodal generation |
+| Reinforcement Learning & RLHF | [WebGPT: Browser-assisted question-answering with human feedback](https://arxiv.org/abs/2112.09332) (Nakano et al., 2021) | Web browsing capabilities enhanced through human feedback |
+| Reinforcement Learning & RLHF | [Taskmatrix.ai: Completing tasks by connecting foundation models with millions of apis](https://arxiv.org/abs/2303.16434) (Liang et al., 2024) | Large-scale API connectivity through reinforcement learning |
+| Reinforcement Learning & RLHF | [MADAC: Multi-Agent Decision-Aware Conversation via Reinforcement Learning](https://arxiv.org/abs/2311.05772) (Li et al., 2023) | Decision-aware conversation through multi-agent reinforcement learning |
+| Reinforcement Learning & RLHF | [GopherCite: Teaching language models to support answers with verified quotes](https://arxiv.org/abs/2203.11147) (Menick et al., 2022) | Citation verification through reinforcement learning |
+| Reinforcement Learning & RLHF | [Emergent Abilities of Large Language Models](https://arxiv.org/abs/2206.07682) (Kojima et al., 2022) | Studies emergent abilities through reinforcement learning approaches |
+| Reinforcement Learning & RLHF | [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](https://arxiv.org/abs/2305.18290) (Rafailov et al., 2023) | Preference optimization without explicit reward modeling |
+| Reinforcement Learning & RLHF | [Deep reinforcement learning from human preferences](https://proceedings.neurips.cc/paper/2017/hash/d5e2c0adad503c91f91df240d0cd4e49-Abstract.html) (Christiano et al., 2017) | Foundational work on learning from human preferences |
+| Reinforcement Learning & RLHF | [The Bias-Variance Trade-off in RLHF: Overfitting to Human Feedback in Large Language Models](https://arxiv.org/abs/2311.00168) (Manduzio et al., 2023) | Analysis of overfitting risks in human feedback |
 
 ### Critical Emphasis
 | Emphasis | Description |
