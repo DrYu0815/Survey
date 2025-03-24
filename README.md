@@ -27,7 +27,7 @@ Please cite our survey paper if this index is helpful:
 - [Evaluation](#evaluation)
 - [Industry Products](#industry-products)
 - [Open Issues](#open-issues)
-```
+
 
 ## Challenges
 
