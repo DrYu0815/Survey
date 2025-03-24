@@ -1,103 +1,146 @@
-# Comprehensive Reviews into Function Calling in Large Language Models
+# Table of Contents
 
-A systematic review of techniques, challenges, and solutions for function calling in Large Language Models (LLMs). This repository indexes research on:
-- **Function calling mechanisms**: How LLMs parse user queries to invoke external functions
-- **Deployment strategies**: Methods to implement efficient function calling systems
-- **Evaluation frameworks**: Metrics and benchmarks for assessing function calling capabilities
+- [Frameworks and Tools](#frameworks-and-tools)
+- [Function Calling Foundations](#function-calling-foundations)
+- [Tool Learning](#tool-learning)
+- [Agent Systems](#agent-systems)
+- [Benchmarks and Evaluation](#benchmarks-and-evaluation)
+- [Applications](#applications)
 
-Reproducibility is important! We prioritize methods with open-source implementations when possible.
+## Frameworks and Tools
 
-Please cite our survey paper if this index is helpful:
+|Name|Code|Comment|
+|---|---|---|
+|[LangChain](https://github.com/langchain-ai/langchain)|[Python](https://github.com/langchain-ai/langchain)|Build context-aware reasoning applications with tool integrations|
+|[Semantic Kernel](https://github.com/microsoft/semantic-kernel)|[Python/C#](https://github.com/microsoft/semantic-kernel)|Microsoft's framework for integrating LLMs with external systems|
+|[AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)|[Python](https://github.com/Significant-Gravitas/AutoGPT)|Autonomous AI agent that uses function calling to complete tasks|
+|[BabyAGI](https://github.com/yoheinakajima/babyagi)|[Python](https://github.com/yoheinakajima/babyagi)|Experimental framework for self-building autonomous agents|
+|[BMTools](https://github.com/OpenBMB/BMTools)|[Python](https://github.com/OpenBMB/BMTools)|Tool Learning for Big Models, open-source alternatives to ChatGPT plugins|
+|[vLLM](https://github.com/vllm-project/vllm)|[Python](https://github.com/vllm-project/vllm)|High-throughput and memory-efficient inference engine for LLMs|
+|[Hugging Face Transformers Agents](https://huggingface.co/docs/transformers/agents)|[Python](https://github.com/huggingface/transformers)|Agents API in the Transformers library for tool use|
 
-```bibtex
-@article{wang2025comprehensive,
-  title={Comprehensive Reviews into Function Calling in Large Language Models: An Industrial Perspective},
-  author={Wang, Maolin and Zhang, Yingyi and Peng, Cunyin and Chen, Yicheng and Zhou, Wei and Gu, Jinjie and Zhuang, Chenyi and Guo, Ruocheng and Yu, Bowen and Wang, Wanyu and Zhao, Xiangyu},
-  journal={ACM Transactions on Information Systems},
-  year={2025},
-  publisher={ACM New York, NY, USA}
-}
+## Function Calling Foundations
 
-## Table of Contents
+### Seminal Papers
+|Paper|Venue|Year|
+|---|---|---|
+|[React: Synergizing reasoning and acting in language models](https://arxiv.org/abs/2210.03629) (Yao et al.)|arXiv|2022|
+|[ToolFormer: Language models can teach themselves to use tools](https://arxiv.org/abs/2302.04761) (Schick et al.)|NeurIPS|2024|
+|[MRKL Systems: A modular, neuro-symbolic architecture that combines large language models, external knowledge sources and discrete reasoning](https://arxiv.org/abs/2205.00445) (Karpas et al.)|arXiv|2022|
 
-- [Toolboxes](#toolboxes)
-- [Function Calling Pipeline and Challenges](#function-calling-pipeline-and-challenges)
-- [Sample Construction and Fine-Tuning](#sample-construction-and-fine-tuning)
-- [Deployment and Inference Strategies](#deployment-and-inference-strategies)
-- [Evaluation Methods](#evaluation-methods)
-- [Industry Products](#industry-products)
-- [Open Issues and Future Directions](#open-issues-and-future-directions)
+### Models with Function Calling
+|Model|Organization|Reference|
+|---|---|---|
+|GPT-4|OpenAI|[GPT-4 technical report](https://arxiv.org/abs/2303.08774) (Achiam et al., 2023)|
+|Claude 3|Anthropic|[Tool Use with Claude](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) (Anthropic, 2024)|
+|Llama 3|Meta|[Llama: Open and efficient foundation language models](https://arxiv.org/abs/2302.13971) (Touvron et al., 2023)|
+|Qwen|Alibaba|[Qwen technical report](https://arxiv.org/abs/2309.16609) (Bai et al., 2023)|
+|Mistral|Mistral AI|[Mistral 7B](https://arxiv.org/abs/2310.06825) (Jiang et al., 2023)|
+|GLM|Tsinghua|[GLM-130B: An Open Bilingual Pre-trained Model](https://openreview.net/forum?id=-Aw0rrrPUF) (Zeng et al., 2023)|
 
-## Function Calling Pipeline and Challenges
+### Function Calling Training & Optimization
+|Paper|Venue|Year|Code|
+|---|---|---|---|
+|[Granite-function calling model: Introducing function calling abilities via multi-task learning](https://arxiv.org/abs/2407.00121) (Abdelaziz et al.)|arXiv|2024|[Code](https://github.com/ibm-granite/granite)|
+|[An LLM compiler for parallel function calling](https://arxiv.org/abs/2312.04511) (Kim et al.)|arXiv|2023|[Code](https://github.com/SqueezeAILab/LLMCompiler)|
+|[APIGen: Automated pipeline for generating verifiable and diverse function-calling datasets](https://arxiv.org/abs/2406.18518) (Liu et al.)|arXiv|2024|[Dataset](https://huggingface.co/datasets/Yujia-Qin/APIGen)|
+|[HAMMER: Robust Function-Calling for On-Device Language Models via Function Masking](https://arxiv.org/abs/2410.04587) (Lin et al.)|arXiv|2024|[Code](https://github.com/FlagOpen/FlagEmbedding/tree/master/HAMMER)|
+|[TinyAgent: Function calling at the edge](https://arxiv.org/abs/2409.00608) (Erdogan et al.)|arXiv|2024|[Code](https://github.com/NVlabs/TinyAgent)|
 
-The function calling pipeline consists of three critical stages:
+## Tool Learning
 
-### Pre-call Stage
-This stage involves query processing and function selection:
+### Survey Papers
+|Paper|Venue|Year|
+|---|---|---|
+|[What are tools anyway? A survey from the language model perspective](https://arxiv.org/abs/2403.15452) (Wang et al.)|arXiv|2024|
+|[Tool Learning with Large Language Models: A Survey](https://arxiv.org/abs/2405.17935) (Qu et al.)|arXiv|2024|
+|[Augmented language models: a survey](https://arxiv.org/abs/2302.07842) (Mialon et al.)|arXiv|2023|
+|[A survey on large language model based autonomous agents](https://arxiv.org/abs/2308.11432) (Wang et al.)|arXiv|2023|
 
-| Challenge | Description | Key References |
-|-----------|-------------|----------------|
-| Intent Recognition | Understanding user intent to guide function calling | [GeckOpt (Fore et al., GLSVLSI 2024)](https://dl.acm.org/doi/10.1145/3626184.3635212) |
-| Function Redundancy | Multiple functions with similar purposes increase complexity | [COLT (Qu et al., 2024)](https://arxiv.org/abs/2405.16089), [Gorilla (Patil et al., 2023)](https://arxiv.org/abs/2305.15334) |
+### Tool Learning Methods
+|Paper|Venue|Year|Code|
+|---|---|---|---|
+|[ToolLLM: Facilitating large language models to master 16000+ real-world APIs](https://arxiv.org/abs/2307.16789) (Qin et al.)|arXiv|2023|[Dataset](https://github.com/OpenBMB/ToolBench)|
+|[HuggingGPT: Solving AI tasks with ChatGPT and its friends in HuggingFace](https://arxiv.org/abs/2303.17580) (Shen et al.)|arXiv|2023|[Code](https://github.com/microsoft/JARVIS)|
+|[ToolAlpaca: Generalized Tool Learning for Language Models with 3000 Simulated Cases](https://arxiv.org/abs/2306.05301) (Tang et al.)|arXiv|2023|[Code](https://github.com/tangqiaoyu/ToolAlpaca)|
+|[Gorilla: Large language model connected with massive APIs](https://arxiv.org/abs/2305.15334) (Patil et al.)|arXiv|2023|[Code](https://github.com/ShishirPatil/gorilla)|
+|[RestGPT: Connecting Large Language Models with Real-World RESTful APIs](https://arxiv.org/abs/2306.06624) (Song et al.)|arXiv|2023|[Code](https://github.com/Yifan-Song793/RestGPT)|
+|[ToolkenGPT: Augmenting frozen language models with massive tools via tool embeddings](https://arxiv.org/abs/2407.20859) (Hao et al.)|NeurIPS|2024|[Code](https://github.com/shibo-hao/ToolkenGPT)|
+|[TALM: Tool augmented language models](https://arxiv.org/abs/2205.12255) (Parisi et al.)|arXiv|2022|[Code](https://github.com/google-research/google-research/tree/master/talm)|
 
-### On-call Stage
-This stage covers when and how to invoke functions:
+## Agent Systems
 
-| Challenge | Description | Key References |
-|-----------|-------------|----------------|
-| Missing Calls | Failing to initiate necessary function calls | [YAKE (Wang et al., 2020)](https://doi.org/10.1016/j.knosys.2020.105970) |
-| Unnecessary Calls | Invoking functions when not required | [ChemAgent (Yu et al., 2024)](https://arxiv.org/abs/2411.07228) |
-| Missing/Illegal Parameters | Parameters that are inadequate or inappropriate | [APIGen (Liu et al., 2024)](https://arxiv.org/abs/2406.18518) |
-| Function Hallucination | Calling non-existent functions or parameters | [ToolGen (Wang et al., 2024)](https://arxiv.org/abs/2410.03439) |
-| Pronoun Resolution | Accurately interpreting contextual references | [Zhang et al., ACL 2019](https://aclanthology.org/P19-1073/) |
-| LLM Inherent Limitations | Latency and accuracy limitations from model design | [Kim et al., 2023](https://arxiv.org/abs/2312.04511) |
-| Multi-Call Procedure | Managing sequential or parallel function calls | [LLM-Tool Compiler (Singh et al., 2024)](https://arxiv.org/abs/2405.17438) |
-| Context Management | Maintaining coherent understanding across conversations | [MemoryBank (Zhong et al., AAAI 2024)](https://doi.org/10.1609/aaai.v38i17.29019) |
+### Planning and Orchestration
+|Paper|Venue|Year|Code|
+|---|---|---|---|
+|[TaskMatrix.ai: Completing tasks by connecting foundation models with millions of APIs](https://arxiv.org/abs/2303.16434) (Liang et al.)|Intelligent Computing|2024|[Paper](https://www.intelligent-computing.ai/article/journal/ic/0063)|
+|[ToolChain*: Efficient action space navigation in large language models with A* search](https://arxiv.org/abs/2310.13227) (Zhuang et al.)|arXiv|2023|[Code](https://github.com/ToolChainLLM/ToolChainLLM)|
+|[TPTU: Task planning and tool usage of large language model-based AI agents](https://arxiv.org/abs/2308.03427) (Ruan et al.)|arXiv|2023|[Code](https://github.com/agent-of-TongjiUniversity/TPTU)|
+|[ControlLLM: Augment language models with tools by searching on graphs](https://arxiv.org/abs/2310.17796) (Liu et al.)|arXiv|2023||
+|[LLM-Planner: Few-shot grounded planning for embodied agents with large language models](https://arxiv.org/abs/2212.04088) (Song et al.)|ICCV|2023||
 
-### Post-call Stage
-This stage involves execution and response generation:
+### Tool Retrieval
+|Paper|Venue|Year|Code|
+|---|---|---|---|
+|[COLT: Towards Completeness-Oriented Tool Retrieval for Large Language Models](https://arxiv.org/abs/2405.16089) (Qu et al.)|KDD|2024|[Code](https://github.com/changleqiu/COLT)|
+|[ToolGen: Unified Tool Retrieval and Calling via Generation](https://arxiv.org/abs/2410.03439) (Wang et al.)|arXiv|2024|[Code](https://github.com/microsoft/ToolGen)|
+|[CRAFT: Customizing LLMs by creating and retrieving from specialized toolsets](https://arxiv.org/abs/2309.17428) (Yuan et al.)|arXiv|2023|[Code](https://github.com/lifelong-learning-systems/craft)|
+|[Look Before You Leap: Towards Decision-Aware and Generalizable Tool-Usage for Large Language Models](https://arxiv.org/abs/2402.16696) (Gui et al.)|arXiv|2024||
 
-| Challenge | Description | Key References |
-|-----------|-------------|----------------|
-| Execution Result Mismatch | Function outputs not aligning with user expectations | [Wu et al., 2024](https://arxiv.org/abs/2402.18649) |
-| Irrelevant Information Overload | Excessive information in function outputs | [Xu et al., 2023](https://arxiv.org/abs/2310.04408) |
-| Mismatch Between Real-World Functions and LLM Results | Gap between LLM-generated outputs and executable commands | [Syllabus (Sullivan et al., 2024)](https://arxiv.org/abs/2411.11318) |
-| Execution Failure | Function fails to execute despite correct triggering | [AMOR (Guan et al., 2024)](https://arxiv.org/abs/2402.01469) |
+### Self-Improvement
+|Paper|Venue|Year|Code|
+|---|---|---|---|
+|[CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing](https://openreview.net/forum?id=EHg5GDnyq1) (Gou et al.)|ICLR|2023|[Code](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)|
+|[Agent-Pro: Learning to evolve via policy-level reflection and optimization](https://arxiv.org/abs/2402.17574) (Zhang et al.)|arXiv|2024|[Code](https://github.com/OpenMOSS/Agent-Pro)|
+|[Confucius: Iterative tool learning from introspection feedback by easy-to-difficult curriculum](https://arxiv.org/abs/2402.04256) (Gao et al.)|AAAI|2024|[Code](https://github.com/PKU-Alignment/Confucius)|
+|[Towards mitigating LLM hallucination via self reflection](https://arxiv.org/abs/2310.06271) (Ji et al.)|EMNLP|2023||
 
-## Sample Construction and Fine-Tuning
+## Benchmarks and Evaluation
 
-### Function Collection
-This initial step involves collecting function objects and their descriptions:
+### Comprehensive Benchmarks
+|Name|Paper|Year|Code|
+|---|---|---|---|
+|[API-Bank](https://arxiv.org/abs/2304.08244) (Li et al.)|2023|[Code](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank)|
+|[T-Eval](https://arxiv.org/abs/2312.14033) (Chen et al.)|2023|[Code](https://github.com/open-compass/T-Eval)|
+|[RoTBench](https://arxiv.org/abs/2401.08326) (Ye et al.)|2024|[Code](https://github.com/JunjieYe/RotBench)|
+|[AgentBoard](https://arxiv.org/abs/2401.13178) (Ma et al.)|2024|[Code](https://github.com/hkust-nlp/AgentBoard)|
+|[ToolEyes](https://arxiv.org/abs/2401.00741) (Ye et al.)|2024|[Code](https://github.com/JunjieYe/ToolEyes)|
+|[MetaTool](https://arxiv.org/abs/2310.03128) (Huang et al.)|2023|[Code](https://github.com/meta-toolbench/MetaTool)|
 
-| Approach | Description | Key Examples |
-|----------|-------------|--------------|
-| Manual Construction | Human-crafted function specifications | Industry standards |
-| LLM Generation | Using LLMs like GPT-4 to generate functions | [APIGen (Liu et al., 2024)](https://arxiv.org/abs/2406.18518) |
-| Web Mining | Extracting diverse function objects from the web | [Gorilla (Patil et al., 2023)](https://arxiv.org/abs/2305.15334) |
+### Function Calling Specific
+|Name|Paper|Year|Code|
+|---|---|---|---|
+|[BFCL](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard)|2024|[Code](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard)|
+|[NESTFUL](https://arxiv.org/abs/2409.03797) (Basu et al.)|2024|[Code](https://github.com/IBM/Nestful)|
+|[NesTools](https://arxiv.org/abs/2410.11805) (Han et al.)|2024|[Code](https://github.com/ZurichNLP/NesTools)|
+|[ShortcutsBench](https://arxiv.org/abs/2407.00132) (Shen et al.)|2024|[Code](https://github.com/microsoft/ShortcutsBench)|
+|[API-BLEND](https://arxiv.org/abs/2402.15491) (Basu et al.)|2024|[Dataset](https://huggingface.co/datasets/ibm-granite/API-BLEND)|
+|[Seal-Tools](https://arxiv.org/abs/2405.08355) (Wu et al.)|2024|[Code](https://github.com/tonyzhaozh/seal-tools)|
 
-### Function Calling Sample Construction
+## Applications
 
-Different representation approaches:
+### Retrieval-Augmented Generation
+|Paper|Venue|Year|Code|
+|---|---|---|---|
+|[A survey on RAG meets LLMs: Towards retrieval-augmented large language models](https://arxiv.org/abs/2405.06211) (Ding et al.)|arXiv|2024||
+|[ChatDB: Augmenting LLMs with Databases as Their Symbolic Memory](https://arxiv.org/abs/2306.03901) (Hu et al.)|arXiv|2023|[Code](https://github.com/huchenxucs/ChatDB)|
+|[LLM-dCache: Improving Tool-Augmented LLMs with GPT-Driven Localized Data Caching](https://arxiv.org/abs/2406.06799) (Singh et al.)|arXiv|2024||
+|[AvaTaR: Optimizing LLM Agents for Tool-Assisted Knowledge Retrieval](https://arxiv.org/abs/2406.11200) (Wu et al.)|arXiv|2024|[Code](https://github.com/shirleyisw/AvaTaR)|
 
-| Method | Description | Examples |
-|--------|-------------|----------|
-| Text Representation | Functions as natural language | [Toolformer (Schick et al., 2024)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/e7dc688e65aca8fdb517ec71346bac4c-Abstract-Conference.html) |
-| Token Representation | Functions as special tokens | [ToolGen (Wang et al., 2024)](https://arxiv.org/abs/2410.03439) |
-| Multi-turn Interaction | Simulating conversation flows | [GraphQL-RestBench (Saha et al., EMNLP 2024)](https://aclanthology.org/2024.emnlp-main.1338/) |
+### Domain-Specific Applications
+|Paper|Venue|Year|Code|
+|---|---|---|---|
+|[Tool Calling: Enhancing Medication Consultation via Retrieval-Augmented Large Language Models](https://arxiv.org/abs/2404.17897) (Huang et al.)|arXiv|2024||
+|[Alchemist: LLM-Aided End-User Development of Robot Applications](https://ieeexplore.ieee.org/document/10444584) (Karli et al.)|HRI|2024||
+|[TOOL-ED: Enhancing Empathetic Response Generation with the Tool Calling Capability of LLM](https://arxiv.org/abs/2412.03096) (Cao et al.)|arXiv|2024||
+|[Exploring Large Language Models in Financial Argument Relation Identification](https://aclanthology.org/2024.finnlp-1.12/) (Otiefy et al.)|FinNLP@LREC-COLING|2024||
+|[AppAgent: Multimodal agents as smartphone users](https://arxiv.org/abs/2312.13771) (Yang et al.)|arXiv|2023|[Code](https://github.com/mnotgod/AppAgent)|
+|[OS-ATLAS: A Foundation Action Model for Generalist GUI Agents](https://arxiv.org/abs/2410.23218) (Wu et al.)|arXiv|2024|[Code](https://github.com/microsoft/OS-ATLAS)|
 
-### Fine-tuning Strategies
-
-| Strategy | Description | Key References |
-|----------|-------------|----------------|
-| Supervised Fine-Tuning (SFT) | Direct imitation learning | [ToolGen (Wang et al., 2024)](https://arxiv.org/abs/2410.03439), [RAIT (Sakhinana et al., 2024)](https://arxiv.org/abs/2408.15866) |
-| Parameter-Efficient Fine-Tuning (PEFT) | Fine-tuning with fewer parameters | [GPT4Tools (Yang et al., NeurIPS 2024)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/e5e07c49ab72f8c8c9135a3a45c61077-Abstract-Conference.html), [CITI (Hao et al., 2024)](https://arxiv.org/abs/2409.13202) |
-| Reinforcement Learning | Learning through interaction | [Toolformer (Schick et al., 2024)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/e7dc688e65aca8fdb517ec71346bac4c-Abstract-Conference.html) |
-| RLHF | Alignment with human preferences | [WebGPT (Nakano et al., 2021)](https://arxiv.org/abs/2112.09332), [MADAC (Li et al., 2024)](https://arxiv.org/abs/2411.15036) |
-
-### Critical Considerations
-
-| Factor | Finding | Evidence |
-|--------|---------|----------|
-| Data Quality | Quality trumps quantity | Experimental verification with diminishing returns after ~400 samples |
-| Model Scaling | Larger models show better capabilities | Performance scaling with model size (1.8B → 4B → 7B) |
-| Capability Balance | Risk of degrading general capabilities | Trade-offs between specialized function calling and general language abilities |
+### Multi-Agent Systems
+|Paper|Venue|Year|Code|
+|---|---|---|---|
+|[MetaAgents: Simulating interactions of human behaviors for LLM-based task-oriented coordination](https://arxiv.org/abs/2310.06500) (Li et al.)|arXiv|2023||
+|[AgentOhana: Design Unified Data and Training Pipeline for Effective Agent Learning](https://arxiv.org/abs/2402.15506) (Zhang et al.)|arXiv|2024|[Code](https://github.com/DeepWok/agentohana)|
+|[Efficient Multi-Agent Collaboration with Tool Use for Online Planning](https://arxiv.org/abs/2412.20145) (Zhou et al.)|arXiv|2024||
+|[TravelPlanner: A Benchmark for Real-World Planning with Language Agents](https://arxiv.org/abs/2402.01622) (Xie et al.)|ICML|2024|[Code](https://github.com/jiangjiechen/TravelPlanner)|
