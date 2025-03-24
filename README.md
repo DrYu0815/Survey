@@ -199,15 +199,23 @@ Please cite our survey paper if this index is helpful:
 | Grammar Control | [Grammar-Aligned Decoding](https://arxiv.org/abs/2405.21047) (Park et al., 2024) | arXiv | [Code](https://github.com/microsoft/semantic-kernel/tree/main/python/semantic_kernel/core_plugins) | Constrains output using context-free grammar |
 | TOOL-ED | [TOOL-ED: Enhancing Empathetic Response Generation with the Tool Calling Capability of LLM](https://arxiv.org/abs/2412.03096) (Cao et al., 2024) | arXiv | - | Treats knowledge bases as callable tools for empathetic dialogue |
 | IBSEN | [IBSEN: Director-Actor Agent Collaboration for Controllable and Interactive Drama Script Generation](https://aclanthology.org/2024.acl-long.99/) (Han et al., 2024) | ACL | [Code](https://github.com/X-PLUG/IBSEN) | Multi-agent coordination for controlled script generation |
+| Multi-agent coordination | [Improving factuality and reasoning in language models through multiagent debate](https://arxiv.org/abs/2305.14325) (Chan et al., 2023) | arXiv | [Code](https://github.com/composable-models/llm_multiagent_debate) | Collaborative refinement through structured agent debate |
+| Task proposal | [Proposer-Agent-Evaluator (PAE): Autonomous Skill Discovery For Foundation Model Internet Agents](https://arxiv.org/abs/2412.13194) (Zhou et al., 2024) | arXiv | [Code](https://github.com/LifeLongTeam/pae-autonomous-skill-discovery) | Automated task proposal and execution validation |
+| Experience transfer | [X-TOOLS: Tool Generation and Adaptation from Existing APIs for Dialogue Agents](https://arxiv.org/abs/2311.09562) (Patil et al., 2023) | arXiv | [Code](https://github.com/X-PLUG/X-TOOLS) | Transfers API experience across different domains |
 
 ### Function Mapping
 | Approach | Paper | Code | Comment |
 |----------|-------|------|---------|
 | Rule-based Resolution | [Deterministic coreference resolution based on entity-centric, precision-ranked rules](https://aclanthology.org/J13-4004/) (Lee et al., 2013) | [Code](https://github.com/huggingface/neuralcoref) | Predefined mapping rules for contextual references |
+| Rule-based Resolution | [End-to-end neural entity linking](https://aclanthology.org/J19-1044/) (Kolitsas et al., 2018) | [Code](https://github.com/dalab/end2end_neural_el) | Neural approach to entity linking with rule-based components |
 | Knowledge Reasoning | [Knowledge-aware Pronoun Coreference Resolution](https://aclanthology.org/P19-1081/) (Zhang et al., 2019) | - | Leverages knowledge graphs for reference resolution |
 | LLM Mapping | [End-to-end Neural Coreference Resolution](https://aclanthology.org/D17-1018/) (Lee et al., 2017) | [Code](https://github.com/kentonl/e2e-coref) | Uses neural models for contextual mapping |
 | Dictionary Mapping | [Syllabus: Portable Curricula for Reinforcement Learning Agents](https://arxiv.org/abs/2411.11318) (Sullivan et al., 2024) | [Code](https://github.com/rsullivan00/syllabus) | Unified APIs and format alignment mechanisms |
-| Parameter Validation | - | - | Verification of parameter completeness and accuracy |
+| Semantic Matching | [Improving Semantic Similarity for Low-Resource Named Entity Linking](https://arxiv.org/abs/2203.00778) (Niu et al., 2022) | [Code](https://github.com/HLTCHKUST/semnet) | Vector-based semantic similarity for linking entities |
+| Normalization | - | - | Format standardization for consistent representation |
+| Parameter Checking | - | - | Verification of parameter completeness and formatting |
+| Value Enumeration | - | - | Validating input values against acceptable ranges |
+| Permission Management | - | - | Ensuring appropriate access levels for function execution |
 
 ### Response Generation
 | Approach | Paper | Code | Comment |
