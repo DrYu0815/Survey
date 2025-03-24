@@ -203,7 +203,7 @@ Please cite our survey paper if this index is helpful:
 | Task proposal | [Proposer-Agent-Evaluator (PAE): Autonomous Skill Discovery For Foundation Model Internet Agents](https://arxiv.org/abs/2412.13194) (Zhou et al., 2024) | arXiv | [Code](https://github.com/LifeLongTeam/pae-autonomous-skill-discovery) | Automated task proposal and execution validation |
 | Experience transfer | [X-TOOLS: Tool Generation and Adaptation from Existing APIs for Dialogue Agents](https://arxiv.org/abs/2311.09562) (Patil et al., 2023) | arXiv | [Code](https://github.com/X-PLUG/X-TOOLS) | Transfers API experience across different domains |
 
-### Function Mapping (§4.4)
+### Function Mapping
 
 #### Resolution
 | Approach | Paper | Code | Comment |
@@ -227,7 +227,7 @@ Please cite our survey paper if this index is helpful:
 | Value enumeration | - | - | Validating input values against acceptable ranges |
 | Permission management | - | - | Ensuring appropriate access levels for function execution |
 
-### Response Generation (§4.5)
+### Response Generation
 
 #### Initial Generation
 | Approach | Paper | Code | Comment |
@@ -268,7 +268,7 @@ Please cite our survey paper if this index is helpful:
 | System mapping | [Instance-wise prompting for few-shot transferability of large language models](https://arxiv.org/abs/2401.04997) (Pan et al., 2024) | [Code](https://github.com/apple/ml-instance-wise-prompting) | Instance-specific mapping mechanisms |
 | System mapping | [Vipergpt: Visual inference via python execution for reasoning](https://arxiv.org/abs/2303.08128) (Suris et al., 2023) | [Code](https://github.com/cvlab-columbia/viper) | Python execution-based visual reasoning and mapping |
 
-### Memory Scheme (§4.6)
+### Memory Scheme
 
 #### Memory Structure
 | Approach | Paper | Code | Comment |
