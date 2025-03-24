@@ -111,7 +111,7 @@ Function calling capabilities in LLMs follow a three-stage workflow consisting o
 
 ### Critical Emphasis
 
-![Performance comparison across different model sizes, showing that larger models demonstrate substantially better function calling capabilities after fine-tuning, while base models show minimal function calling abilities regardless of scale.](./figures/model_comparison_q.jpg)
+![Experimental results showing performance trends across models of different sizes, demonstrating that larger models achieve significantly better function calling capabilities after fine-tuning.](./figures/model_size_comparison.jpg)
 
 Based on practical implementations, we emphasize that data quality (and variety) plays a more crucial role than data quantity in both data construction and fine-tuning phases, given the intricate nature of function calling tasks.
 
