@@ -115,7 +115,7 @@ Please cite our survey paper if this index is helpful:
 
 ![Figure 6: A Typical Deployment of LLM for Function Calling Stages: The Flow through Input Construction, Memory Integration, and Output Format Validation (Function Execution). Note that actual implementations may vary in practice.](./figures/deployment.jpg)
 
-This section explores practical deployment strategies for function-calling LLMs. Figure 6 illustrates a typical workflow where queries pass through input construction, LLM processing, and format validation or execution, with memory components maintaining context throughout the process.
+This section explores practical deployment strategies for function-calling LLMs. Figure illustrates a typical workflow where queries pass through input construction, LLM processing, and format validation or execution, with memory components maintaining context throughout the process.
 
 ### Task Planning
 
@@ -224,7 +224,7 @@ This section explores practical deployment strategies for function-calling LLMs.
 
 ![Figure 7: Function mapping strategies in LLM function calling, illustrating the transformation process from natural language input to system-executable function calls through pronoun mapping, format alignment, and error checking.](./figures/functionmapping.jpg)
 
-Function mapping plays a crucial role in deploying function calling, primarily responsible for transforming model outputs at the semantic level into executable commands in the physical space. Moreover, as shown in Fig. 7, function mapping involves Pronoun Mapping, Format Alignment, and Error Checking.
+Function mapping plays a crucial role in deploying function calling, primarily responsible for transforming model outputs at the semantic level into executable commands in the physical space. Moreover, as shown in figure, function mapping involves Pronoun Mapping, Format Alignment, and Error Checking.
 
 
 
