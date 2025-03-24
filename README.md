@@ -1,4 +1,3 @@
-```markdown
 # Comprehensive Reviews into Function Calling in Large Language Models
 
 An index of concepts, frameworks, and methodologies in:
@@ -30,9 +29,6 @@ Please cite our survey paper if this index is helpful:
 - [Open Issues](#open-issues)
 ```
 
-Now I'll continue with the Challenges section, following the structure from your taxonomy:
-
-```markdown
 ## Challenges
 
 ### Pre-call Stage
