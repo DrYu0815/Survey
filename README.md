@@ -53,3 +53,51 @@ This stage covers when and how to invoke functions:
 | LLM Inherent Limitations | Latency and accuracy limitations from model design | [Kim et al., 2023](https://arxiv.org/abs/2312.04511) |
 | Multi-Call Procedure | Managing sequential or parallel function calls | [LLM-Tool Compiler (Singh et al., 2024)](https://arxiv.org/abs/2405.17438) |
 | Context Management | Maintaining coherent understanding across conversations | [MemoryBank (Zhong et al., AAAI 2024)](https://doi.org/10.1609/aaai.v38i17.29019) |
+
+### Post-call Stage
+This stage involves execution and response generation:
+
+| Challenge | Description | Key References |
+|-----------|-------------|----------------|
+| Execution Result Mismatch | Function outputs not aligning with user expectations | [Wu et al., 2024](https://arxiv.org/abs/2402.18649) |
+| Irrelevant Information Overload | Excessive information in function outputs | [Xu et al., 2023](https://arxiv.org/abs/2310.04408) |
+| Mismatch Between Real-World Functions and LLM Results | Gap between LLM-generated outputs and executable commands | [Syllabus (Sullivan et al., 2024)](https://arxiv.org/abs/2411.11318) |
+| Execution Failure | Function fails to execute despite correct triggering | [AMOR (Guan et al., 2024)](https://arxiv.org/abs/2402.01469) |
+
+## Sample Construction and Fine-Tuning
+
+### Function Collection
+This initial step involves collecting function objects and their descriptions:
+
+| Approach | Description | Key Examples |
+|----------|-------------|--------------|
+| Manual Construction | Human-crafted function specifications | Industry standards |
+| LLM Generation | Using LLMs like GPT-4 to generate functions | [APIGen (Liu et al., 2024)](https://arxiv.org/abs/2406.18518) |
+| Web Mining | Extracting diverse function objects from the web | [Gorilla (Patil et al., 2023)](https://arxiv.org/abs/2305.15334) |
+
+### Function Calling Sample Construction
+
+Different representation approaches:
+
+| Method | Description | Examples |
+|--------|-------------|----------|
+| Text Representation | Functions as natural language | [Toolformer (Schick et al., 2024)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/e7dc688e65aca8fdb517ec71346bac4c-Abstract-Conference.html) |
+| Token Representation | Functions as special tokens | [ToolGen (Wang et al., 2024)](https://arxiv.org/abs/2410.03439) |
+| Multi-turn Interaction | Simulating conversation flows | [GraphQL-RestBench (Saha et al., EMNLP 2024)](https://aclanthology.org/2024.emnlp-main.1338/) |
+
+### Fine-tuning Strategies
+
+| Strategy | Description | Key References |
+|----------|-------------|----------------|
+| Supervised Fine-Tuning (SFT) | Direct imitation learning | [ToolGen (Wang et al., 2024)](https://arxiv.org/abs/2410.03439), [RAIT (Sakhinana et al., 2024)](https://arxiv.org/abs/2408.15866) |
+| Parameter-Efficient Fine-Tuning (PEFT) | Fine-tuning with fewer parameters | [GPT4Tools (Yang et al., NeurIPS 2024)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/e5e07c49ab72f8c8c9135a3a45c61077-Abstract-Conference.html), [CITI (Hao et al., 2024)](https://arxiv.org/abs/2409.13202) |
+| Reinforcement Learning | Learning through interaction | [Toolformer (Schick et al., 2024)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/e7dc688e65aca8fdb517ec71346bac4c-Abstract-Conference.html) |
+| RLHF | Alignment with human preferences | [WebGPT (Nakano et al., 2021)](https://arxiv.org/abs/2112.09332), [MADAC (Li et al., 2024)](https://arxiv.org/abs/2411.15036) |
+
+### Critical Considerations
+
+| Factor | Finding | Evidence |
+|--------|---------|----------|
+| Data Quality | Quality trumps quantity | Experimental verification with diminishing returns after ~400 samples |
+| Model Scaling | Larger models show better capabilities | Performance scaling with model size (1.8B → 4B → 7B) |
+| Capability Balance | Risk of degrading general capabilities | Trade-offs between specialized function calling and general language abilities |
