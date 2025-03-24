@@ -71,9 +71,11 @@ Please cite our survey paper if this index is helpful:
 | Approach | Paper | Code | Description |
 |----------|-------|------|-------------|
 | Text Representation | [Toolformer: Language models can teach themselves to use tools](https://arxiv.org/abs/2302.04761) (Schick et al., 2024) | [Code](https://github.com/lucidrains/toolformer-pytorch) | Represents functions as natural language text, providing flexibility but requiring more token space |
-| Token Representation | [ToolGen: Unified Tool Retrieval and Calling via Generation](https://arxiv.org/abs/2410.03439) (Wang et al., 2024) | [Code](https://github.com/OpenLLMAI/ToolGen) | Encodes functions as special tokens during training for efficiency, converted to natural language during inference |
+| Text Representation | [ToolGen: Unified Tool Retrieval and Calling via Generation](https://arxiv.org/abs/2410.03439) (Wang et al., 2024) | [Code](https://github.com/OpenLLMAI/ToolGen) | Integrates tool information through generation with natural language descriptions |
+| Token Representation | [Toolformer: Language models can teach themselves to use tools](https://arxiv.org/abs/2302.04761) (Schick et al., 2024) | [Code](https://github.com/lucidrains/toolformer-pytorch) | Encodes functions as special tokens during training for computational efficiency |
+| Token Representation | [ToolGen: Unified Tool Retrieval and Calling via Generation](https://arxiv.org/abs/2410.03439) (Wang et al., 2024) | [Code](https://github.com/OpenLLMAI/ToolGen) | Uses token representation during training while maintaining semantic richness |
 | Multi-turn Interaction | [Sequential API Function Calling Using GraphQL Schema](https://aclanthology.org/2024.emnlp-industry-4107/) (Saha et al., 2024) | - | Introduces structured API schemas and response mapping for sequential function calling |
-| Function Masking | [Hammer: Robust Function-Calling for On-Device Language Models via Function Masking](https://arxiv.org/abs/2410.04587) (Lin et al., 2024) | - | Specialized techniques to address naming convention sensitivity issues for on-device deployment |
+| Multi-turn Interaction | [Hammer: Robust Function-Calling for On-Device Language Models via Function Masking](https://arxiv.org/abs/2410.04587) (Lin et al., 2024) | - | Specialized techniques to address naming convention sensitivity issues for on-device deployment |
 
 ### Fine-tuning Strategies
 | Method | Papers | Description |
