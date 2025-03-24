@@ -314,34 +314,62 @@ Please cite our survey paper if this index is helpful:
 
 ## Evaluation
 
-### Overall Performance Metrics
+### Overall Performance
+
+#### Function Selection Metrics
 | Metric | Description | Example Works |
 |--------|-------------|--------------|
 | Recall@K | Proportion of relevant tools ranked within top K positions | [COLT: Towards Completeness-Oriented Tool Retrieval for Large Language Models](https://arxiv.org/abs/2405.16089) (Qu et al., 2024) |
 | NDCG@K | Normalized Discounted Cumulative Gain at K | [Large language models are versatile decomposers: Decompose evidence and questions for table-based reasoning](https://arxiv.org/abs/2301.13808) (Cheng et al., 2023) |
 | COMP@K | Completeness-oriented retrieval evaluation at K | [COLT: Towards Completeness-Oriented Tool Retrieval for Large Language Models](https://arxiv.org/abs/2405.16089) (Qu et al., 2024) |
+
+#### Core Evaluation Metrics
+| Metric | Description | Example Works |
+|--------|-------------|--------------|
 | Pass Rate | Proportion of successfully completed instructions | [Toolllm: Facilitating large language models to master 16000+ real-world apis](https://arxiv.org/abs/2307.16789) (Qin et al., 2023) |
 | Win/Success Rate | Quality evaluation including information richness, factual accuracy | [NESTFUL: A Benchmark for Evaluating LLMs on Nested Sequences of API Calls](https://arxiv.org/abs/2409.03797) (Basu et al., 2024) |
+
+#### Comprehensive Assessment
+| Metric | Description | Example Works |
+|--------|-------------|--------------|
 | T-Eval | Comprehensive assessment of planning, reasoning, retrieval, understanding | [T-eval: Evaluating the tool utilization capability of large language models step by step](https://aclanthology.org/2024.acl-long.591/) (Chen et al., 2024) |
+
+#### Quality-based Metrics
+| Metric | Description | Example Works |
+|--------|-------------|--------------|
 | BLEU | Bilingual Evaluation Understudy for translation quality | [Bleu: a method for automatic evaluation of machine translation](https://aclanthology.org/P02-1040/) (Papineni et al., 2002) |
 | ROUGE-L | Longest Common Subsequence based metric for text summarization | [Rouge: A package for automatic evaluation of summaries](https://aclanthology.org/W04-1013/) (Lin, 2004) |
 | Exact Match | Binary assessment of complete answer correctness | [Bootstrapping a neural natural language interface for databases](https://arxiv.org/abs/1908.07562) (Bogin et al., 2019) |
 | F1 score | Harmonic mean of precision and recall | [Attention is all you need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) |
 
 ### Benchmarks
+
+#### Early Foundational
 | Name | Paper | Code | Description |
 |------|-------|------|-------------|
 | ToolLLM | [Toolllm: Facilitating large language models to master 16000+ real-world apis](https://arxiv.org/abs/2307.16789) (Qin et al., 2023) | [Code](https://github.com/OpenBMB/ToolBench) | Comprehensive benchmark for API utility |
 | ToolAlpaca | [Toolalpaca: Generalized tool learning for language models with 3000 simulated cases](https://arxiv.org/abs/2306.05301) (Tang et al., 2023) | [Code](https://github.com/tangqiaoyu/ToolAlpaca) | Generalized tool learning with simulated cases |
 | Gorilla | [Gorilla: Large language model connected with massive apis](https://arxiv.org/abs/2305.15334) (Patil et al., 2023) | [Code](https://github.com/ShishirPatil/gorilla) | Berkeley Function Calling Leaderboard |
+
+#### Standardized Platforms
+| Name | Paper | Code | Description |
+|------|-------|------|-------------|
 | APIBench | [Gorilla: Large language model connected with massive apis](https://arxiv.org/abs/2305.15334) (Patil et al., 2023) | [Code](https://github.com/ShishirPatil/gorilla) | Platform for standardized API evaluation |
 | API-Bank | [Api-bank: A benchmark for tool-augmented llms](https://arxiv.org/abs/2304.08244) (Li et al., 2023) | [Code](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank) | Comprehensive API interaction testing |
+
+#### Domain-Specific
+| Name | Paper | Code | Description |
+|------|-------|------|-------------|
 | ShortcutsBench | [Shortcutsbench: A large-scale real-world benchmark for api-based agents](https://arxiv.org/abs/2407.00132) (Shen et al., 2024) | [Code](https://github.com/MobileLLM/ShortcutsBench) | Real APIs from Apple's operating systems |
 | BigCodeBench | [You are not alone: Large language models effectively leverage duplications in code corpus](https://arxiv.org/abs/2312.15201) (Zhou et al., 2023) | [Code](https://github.com/bigcode-project/bigcode-evaluation-harness) | Specialized benchmark for code-related function calls |
 | SEAL | [Seal: A benchmark for software api learning with generative ai agents](https://arxiv.org/abs/2310.15177) (Ji et al., 2023) | [Code](https://github.com/google-deepmind/seal) | Software API learning benchmark |
 | RadABench | [Radial agent benchmark: evaluating task generalization capabilities of multi-platform ai agents](https://arxiv.org/abs/2404.16765) (Yuan et al., 2024) | [Code](https://github.com/radial-inc/radabench) | Cross-platform agent evaluation framework |
 | NoisyToolBench | [Learning to Ask: When LLMs Meet Unclear Instruction](https://arxiv.org/abs/2409.00557) (Wang et al., 2024) | [Code](https://github.com/CAISA-Lab/UnclearInstrLearningToAsk) | Evaluates performance with unclear or noisy instructions |
 | Mobile-Bench | [Benchmarking large language models on mobile applications](https://arxiv.org/abs/2402.14136) (Cao et al., 2024) | [Code](https://github.com/mobile-app-bench/Mobile-Bench) | Specialized benchmark for mobile application interactions |
+
+#### Task-Oriented
+| Name | Paper | Code | Description |
+|------|-------|------|-------------|
 | IN3 | [In3: Instruction-following language models for interactive tasks](https://arxiv.org/abs/2311.09502) (Qi et al., 2023) | [Code](https://github.com/princeton-nlp/in3) | Interactive task evaluation with instruction following |
 | NESTFUL | [NESTFUL: A Benchmark for Evaluating LLMs on Nested Sequences of API Calls](https://arxiv.org/abs/2409.03797) (Basu et al., 2024) | - | Focuses on nested sequences of API calls |
 | UltraTool | [Pluto: A recipe for building adaptable autonomous llm agents](https://arxiv.org/abs/2402.04397) (Guan et al., 2024) | [Code](https://github.com/gpt4life/pluto) | Evaluates adaptable autonomous agent capabilities |
@@ -350,6 +378,10 @@ Please cite our survey paper if this index is helpful:
 | AgentBoard | [AgentBoard: An Analytical Evaluation Board of Multi-turn LLM Agents](https://arxiv.org/abs/2308.03688) (Liu et al., 2023) | [Code](https://github.com/hkust-nlp/agentboard) | Multi-turn agent evaluation platform |
 | TravelPlanner | [Travel planner: A benchmark for real-world planning with language agents](https://arxiv.org/abs/2402.01622) (Wang et al., 2024) | [Code](https://github.com/bellhello/travelplanner) | Travel planning task-specific benchmark |
 | ChinaTravel | [Travel assistant: A benchmark for chinese llm agents in the tourism domain](https://arxiv.org/abs/2403.01502) (Xia et al., 2024) | - | Chinese language travel planning benchmark |
+
+#### Comprehensive Systems
+| Name | Paper | Code | Description |
+|------|-------|------|-------------|
 | API-BLEND | [API-BLEND: A Comprehensive Corpora for Training and Benchmarking API LLMs](https://arxiv.org/abs/2402.15491) (Basu et al., 2024) | [Code](https://github.com/IBM/API-Blend) | Multi-domain API coverage with evaluation methods |
 | NESTOOLS | [Nestools: Crafting efficient tools across diverse scenarios](https://arxiv.org/abs/2402.07472) (Choi et al., 2024) | [Code](https://github.com/kyunghoon-han/NESTools) | Comprehensive evaluation across diverse scenarios |
 | MTU-Bench | [MTU-Bench: A Multi-granularity Tool-Use Benchmark for Large Language Models](https://arxiv.org/abs/2410.11710) (Wang et al., 2024) | [Code](https://github.com/X-LANCE/MTU-Bench) | Multi-granularity tool-use evaluation |
