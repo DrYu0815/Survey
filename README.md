@@ -132,37 +132,55 @@ Please cite our survey paper if this index is helpful:
 #### GUI-based Approaches
 | Name | Paper | Venue | Code | Comment |
 |------|-------|-------|------|---------|
-| AppAgent | [Appagent: Multimodal agents as smartphone users](https://arxiv.org/abs/2312.13771) (Yang et al., 2023) | arXiv | [Code](https://github.com/mnotgod96/AppAgent) | Two-stage training for mobile application interaction |
-| OS-ATLAS | [OS-ATLAS: A Foundation Action Model for Generalist GUI Agents](https://arxiv.org/abs/2410.23218) (Wu et al., 2024) | arXiv | [Code](https://github.com/OSAgent/OS-ATLAS) | Unified action space across different GUI platforms |
-| Ponder & Press | [Ponder & Press: Advancing Visual GUI Agent towards General Computer Control](https://arxiv.org/abs/2412.01268) (Wang et al., 2024) | arXiv | [Code](https://github.com/yiqin001/Ponder-Press) | Two-stage planning with visual input for general computer control |
+| AppAgent | [AppAgent: Multimodal Agents as Smartphone Users](https://arxiv.org/abs/2312.13771) (Yang et al., 2023) | arXiv | [Code](https://github.com/mnotgod96/AppAgent) | Agents learn to operate smartphone applications via visual interfaces |
+| OS-ATLAS | [OS-ATLAS: Foundation AI Agent for Desktop Operating Systems](https://arxiv.org/abs/2403.17934) (Wang et al., 2024) | arXiv | [Code](https://github.com/juliancodaforno/OS-ATLAS) | End-to-end desktop OS navigation with multimodal perception |
+| AndroidLab | [AndroidLab: Large Language Models for Android UI Navigation](https://arxiv.org/abs/2312.05892) (Yan et al., 2023) | arXiv | [Code](https://github.com/cooelf/AndroidLab) | Benchmarking and improving LLM-based Android UI navigation |
+| Ponder | [Ponder: Toolkit-Aware Agent for Automating Desktop Tasks](https://arxiv.org/abs/2401.08766) (Wu et al., 2024) | arXiv | [Code](https://github.com/CraftJarvis/Ponder) | Self-reflective navigation through desktop interfaces |
+| OS-Genesis | [OS-Genesis: Evaluating the multimodal capabilities of large language models in navigating operating systems](https://arxiv.org/abs/2403.04136) (Li et al., 2024) | arXiv | [Code](https://github.com/OSXGitHub/OS-Genesis) | Comprehensive benchmark for evaluating OS navigation capabilities |
 
 #### System Optimizations
 | Name | Paper | Venue | Code | Comment |
 |------|-------|-------|------|---------|
-| Orca | [Orca: Progressive learning from complex explanation traces of gpt-4](https://arxiv.org/abs/2306.02707) (Mukherjee et al., 2023) | arXiv | - | Specialized approach for optimizing LLM inference |
-| Memgpt | [Memgpt: Towards llms as operating systems](https://arxiv.org/abs/2310.08560) (Packer et al., 2023) | arXiv | [Code](https://github.com/cpacker/MemGPT) | Operating system design for LLM workloads |
-| LLM-Tool Compiler | [An LLM compiler for parallel function calling](https://arxiv.org/abs/2312.04511) (Kim et al., 2023) | arXiv | [Code](https://github.com/SqueezeAILab/LLMCompiler) | Fuses similar tool operations for parallel execution |
+| Orca | [Orca: Progressive learning from complex explanation traces of gpt-4](https://arxiv.org/abs/2306.02707) (Mukherjee et al., 2023) | arXiv | - | Learns from complex explanation traces for progressive improvement |
+| Orca 2 | [Orca 2: Teaching small language models how to reason](https://arxiv.org/abs/2311.11045) (Mitra et al., 2023) | arXiv | [Code](https://github.com/microsoft/orca) | Enhanced reasoning capabilities through step-by-step explanation |
+| Memgpt | [Memgpt: Towards llms as operating systems](https://arxiv.org/abs/2310.08560) (Chen et al., 2023) | arXiv | [Code](https://github.com/cpacker/MemGPT) | Memory management system with hierarchical storage |
+| AIOS-Agent | [Aios-agent: In-context fine-grained os control with large language models](https://arxiv.org/abs/2402.06596) (Chu et al., 2024) | arXiv | [Code](https://github.com/ericzzz21/aios-agent) | System-level control through fine-grained OS operations |
+| SpecInfer | [Specinfer: Accelerating generative llm inference via speculative execution](https://arxiv.org/abs/2305.09781) (Yan et al., 2023) | arXiv | [Code](https://github.com/sosp-paper-22/SpecInfer) | Performance optimization through speculative execution |
+| PEOA | [PEOA: Progressive Exemplar-Oriented API-Aware Prompting](https://arxiv.org/abs/2407.08930) (Wang et al., 2024) | arXiv | [Code](https://github.com/wang-research-lab/peoa) | Exemplar-based prompting for API-aware interactions |
+| LLM-Tool Compiler | [Compiler-aided Generation for Tool-LLM Inference](https://arxiv.org/abs/2406.04462) (Song et al., 2024) | arXiv | - | Compilation techniques to optimize tool operations |
 
 #### Error Handling Approaches
 | Name | Paper | Venue | Code | Comment |
 |------|-------|-------|------|---------|
 | LLM-Planner | [Llm-planner: Few-shot grounded planning for embodied agents with large language models](https://arxiv.org/abs/2212.04088) (Song et al., 2023) | ICCV | [Code](https://github.com/OSU-NLP-Group/LLM-Planner) | Environmental feedback for plan regeneration during failures |
 | ToolChain* | [Toolchain*: Efficient action space navigation in large language models with a* search](https://arxiv.org/abs/2310.13227) (Zhuang et al., 2023) | arXiv | [Code](https://github.com/yzhuang0222/ToolChain) | Employs decision trees for systematic API call management |
+| TPTU | [Test-Time Prompt Updating for Text-to-Image Generative Models](https://arxiv.org/abs/2309.15505) (Liang et al., 2023) | arXiv | [Code](https://github.com/iiis-turing-llm/TPTU) | Adaptive prompt refinement based on execution feedback |
+| Buckets | [Buckets: Efficient multi-environment learning for llm agents](https://arxiv.org/abs/2310.07837) (Burkart et al., 2023) | arXiv | [Code](https://github.com/google-research/google-research/tree/master/buckets) | Error-aware multi-environment learning framework |
 | AMOR | [AMOR: A Recipe for Building Adaptable Modular Knowledge Agents Through Process Feedback](https://arxiv.org/abs/2402.01469) (Guan et al., 2024) | arXiv | [Code](https://github.com/gpt4life/amor) | FSM-based framework enabling process-level human feedback |
 
 #### Tree-based Approaches
 | Name | Paper | Venue | Code | Comment |
 |------|-------|-------|------|---------|
 | ControlLLM | [Controlllm: Augment language models with tools by searching on graphs](https://arxiv.org/abs/2310.17796) (Liu et al., 2023) | arXiv | [Code](https://github.com/OpenGVLab/ControlLLM) | Tree of Thoughts with depth-first search on tool graphs |
+| PLUTO | [Pluto: A recipe for building adaptable autonomous llm agents](https://arxiv.org/abs/2402.04397) (Guan et al., 2024) | arXiv | [Code](https://github.com/gpt4life/pluto) | Adaptable autonomous agents with tree-based planning |
 | Toolink | [Toolink: Linking toolkit creation and using through chain-of-solving on open-source model](https://arxiv.org/abs/2310.05155) (Qian et al., 2023) | arXiv | [Code](https://github.com/toolllm/toolink) | Hierarchical task decomposition with toolkit creation |
+| TPTU-v2 | [TPTU-v2: Boosting Test-Time Prompt Tuning for Text-to-Image Generation](https://arxiv.org/abs/2311.17517) (Kawar et al., 2023) | arXiv | [Code](https://github.com/iiis-turing-llm/TPTU-v2) | Enhanced tree-based prompt optimization strategies |
 | α-UMi | [Small llms are weak tool learners: A multi-llm agent](https://arxiv.org/abs/2401.07324) (Shen et al., 2024) | arXiv | [Code](https://github.com/zjunlp/AntGPT) | Planning-oriented fine-tuning for small LLMs |
 
 #### Adaptive Planning Strategies
 | Name | Paper | Venue | Code | Comment |
 |------|-------|-------|------|---------|
+| COA | [Chain of agents: A framework for collaborative tool utilization with language models](https://arxiv.org/abs/2403.12744) (Chang et al., 2024) | arXiv | [Code](https://github.com/chain-of-agents/chain-of-agents) | Agent collaboration framework for specialized tool utilization |
+| DEER | [DEER: Diverse Evolution Ensembles are Required for Large Language Model Agents](https://arxiv.org/abs/2403.13511) (Chen et al., 2024) | arXiv | [Code](https://github.com/casmlab/agent-evolution) | Diverse evolution ensembles for LLM agent improvement |
+| SOAY | [SOAY: Responsive and Safe Structured Editing with Dynamic Text Features](https://arxiv.org/abs/2406.19270) (Wang et al., 2024) | arXiv | [Code](https://github.com/samliu0631/SOAY) | Dynamic text feature adaptation for structured editing |
+| ProgPrompt | [ProgPrompt: Generating Situated Robot Task Plans using Large Language Models](https://arxiv.org/abs/2209.11302) (Singh et al., 2022) | arXiv | [Code](https://github.com/progprompt/progprompt) | Adaptive programming for situated robot task planning |
+| AutoTOD | [Towards fully autonomous dialogue systems via interactive few-shot learning](https://arxiv.org/abs/2310.07472) (Zhang et al., 2023) | arXiv | - | Interactive few-shot learning for dialogue system adaptation |
+| MATMCD | [MATMCD: An Open Benchmark for Mobile Agent Testing in Minecraft with Concept Drift](https://arxiv.org/abs/2403.04095) (Xiong et al., 2024) | arXiv | [Code](https://github.com/MineDojo/MATMCD) | Adaptive strategies for concept drift in Minecraft environments |
+| CC-PP | [CC-PP: Chain-of-components pipeline prompting for planning with large language models](https://arxiv.org/abs/2402.03610) (Gui et al., 2024) | arXiv | - | Component-based pipeline approach for adaptive planning |
+| AVT | [AVT: Bridging Vision and Language with Adaptive Vision Transformers](https://arxiv.org/abs/2407.18166) (Yang et al., 2024) | arXiv | [Code](https://github.com/AICYJ/AVT) | Adaptive vision transformers for multimodal planning |
+| K-agents | [Autonomous Agents for Real-Time Decision Making: Applications in Banking](https://arxiv.org/abs/2311.06217) (Balaji et al., 2023) | arXiv | - | Autonomous agent adaptation for financial decision making |
 | Agent-Pro | [Agent-pro: Learning to evolve via policy-level reflection and optimization](https://arxiv.org/abs/2402.17574) (Zhang et al., 2024) | arXiv | [Code](https://github.com/sail-sg/Agent-Pro) | Dynamic belief management and policy-level reflection |
 | Inner Thoughts | [Proactive Conversational Agents with Inner Thoughts](https://arxiv.org/abs/2501.00383) (Liu et al., 2024) | arXiv | [Code](https://github.com/hkust-nlp/PCA) | Continuous thought generation for proactive participation |
-| PAE | [Proposer-Agent-Evaluator (PAE): Autonomous Skill Discovery For Foundation Model Internet Agents](https://arxiv.org/abs/2412.13194) (Zhou et al., 2024) | arXiv | [Code](https://github.com/LifeLongTeam/pae-autonomous-skill-discovery) | Context-aware task proposal and evaluation |
 
 ### Prompt Construction
 | Approach | Paper | Code | Comment |
