@@ -99,4 +99,59 @@ This section outlines approaches to create high-quality training data and fine-t
 | **Model Scaling Effects** | Larger models demonstrate substantially better function calling capabilities |
 | **Capability Balance** | Maintaining general language abilities while enhancing function calling skills |
 
+## Deployment and Inference
 
+This section covers the techniques and frameworks used during the actual implementation and operation of function calling systems.
+
+### Task Planning
+
+| Approach | Description | Examples |
+|----------|-------------|----------|
+| **Foundational Planning** | Core methodologies for decomposing complex tasks into function calls | [ReAct](https://arxiv.org/abs/2210.03629), [ToolFormer](https://arxiv.org/abs/2302.04761), [AVATAR](https://arxiv.org/abs/2406.11200), [Agent Laboratory](https://arxiv.org/abs/2501.04227) |
+| **GUI-based Approaches** | Methods that enable interaction with graphical interfaces | [AppAgent](https://arxiv.org/abs/2312.13771), [OS-ATLAS](https://arxiv.org/abs/2410.23218), [Ponder & Press](https://arxiv.org/abs/2412.01268) |
+| **System Optimizations** | Techniques to improve efficiency and resource utilization | [Orca](https://arxiv.org/abs/2311.11045), [MemGPT](https://arxiv.org/abs/2310.08560), [LLM Compiler](https://arxiv.org/abs/2405.17438) |
+| **Error Handling** | Approaches for managing execution failures and recovery | [LLM-Planner](https://arxiv.org/abs/2212.04088), [AMOR](https://arxiv.org/abs/2402.01469), [ToolChain*](https://arxiv.org/abs/2310.13227) |
+| **Tree-based Methods** | Systematic solution exploration using tree structures | [ControlLLM](https://arxiv.org/abs/2310.17796), [PLUTO](https://arxiv.org/abs/2404.00450), [α-UMi](https://arxiv.org/abs/2401.07324) |
+| **Adaptive Planning** | Dynamic adjustment of plans based on execution feedback | [COA](https://arxiv.org/abs/2401.17464), [DEER](https://arxiv.org/abs/2402.16696), [MATMCD](https://arxiv.org/abs/2412.13667) |
+
+### Prompt Construction
+
+| Approach | Description | Examples |
+|----------|-------------|----------|
+| **Few-shot Integration** | Including examples of function calls in prompts | [NexusRaven](https://arxiv.org/abs/2402.05129), Four-shot prompting |
+| **Context Management** | Techniques for handling complex contextual information | Function definitions, Chain-of-thought |
+| **Query-based Retrieval** | Proactively seeking clarification when inputs are unclear | [Ask-when-Needed](https://arxiv.org/abs/2409.00557), Interactive refinement |
+
+### Function Generation
+
+| Approach | Description | Examples |
+|----------|-------------|----------|
+| **Grammar Control** | Constraining generation to valid function syntax | [Grammar-Aligned Decoding](https://arxiv.org/abs/2405.21047), [LLM Code Generation](https://arxiv.org/abs/2403.01632) |
+| **Knowledge Guidance** | Using external knowledge to improve function selection | [TOOL-ED](https://arxiv.org/abs/2412.03096), [VisionMask](https://arxiv.org/abs/2411.16120) |
+| **Multi-agent Coordination** | Using multiple specialized agents for function generation | [IBSEN](https://arxiv.org/abs/2401.01507), [PAE](https://arxiv.org/abs/2412.13194) |
+
+### Function Mapping
+
+| Approach | Description | Examples |
+|----------|-------------|----------|
+| **Resolution** | Converting model outputs to executable commands | [Rule-based Mapping](https://arxiv.org/abs/2212.01733), [Knowledge Reasoning](https://arxiv.org/abs/1904.05255) |
+| **Alignment** | Ensuring compatibility between LLM outputs and function requirements | [Syllabus](https://arxiv.org/abs/2411.11318), [ShowUI](https://arxiv.org/abs/2411.10455) |
+| **Validation** | Verifying parameter correctness and handling errors | Parameter type checking, Permission verification |
+
+### Response Generation
+
+| Approach | Description | Examples |
+|----------|-------------|----------|
+| **Initial Generation** | Creating placeholder responses before function execution | [Toolformer](https://arxiv.org/abs/2302.04761), [ToolkenGPT](https://arxiv.org/abs/2312.17294) |
+| **Templates** | Using structured formats for consistent responses | [Gorilla](https://arxiv.org/abs/2305.15334), [ToolLLM](https://arxiv.org/abs/2307.16789) |
+| **Review Mechanisms** | Post-processing and validating function outputs | [RestGPT](https://arxiv.org/abs/2306.06624), [QueryAgent](https://arxiv.org/abs/2403.11886) |
+| **RAG Integration** | Enhancing responses with retrieved examples | [SFR-RAG](https://arxiv.org/abs/2409.09916), [Hybrid RAG](https://arxiv.org/abs/2408.05141) |
+
+### Memory Schemes
+
+| Approach | Description | Examples |
+|----------|-------------|----------|
+| **Memory Structure** | Organizing and storing interaction history | [MemoryBank](https://arxiv.org/abs/2305.10250), [TradingGPT](https://arxiv.org/abs/2309.03736) |
+| **Memory Management** | Controlling access and updates to stored information | [SCM](https://arxiv.org/abs/2304.03442), [RET-LLM](https://arxiv.org/abs/2305.14322) |
+| **Memory Retrieval** | Accessing relevant past interactions | [SYNAPSE](https://openreview.net/forum?id=V5TaL-JsN9o), [TiM](https://arxiv.org/abs/2311.08719) |
+| **Memory Processing** | Transforming raw memories into useful context | [Thought-based Memory](https://arxiv.org/abs/2311.08719), [Knowledge Triplets](https://arxiv.org/abs/2305.14322) |
