@@ -109,6 +109,11 @@ Please cite our survey paper if this index is helpful:
 
 Based on practical implementations, we emphasize that data quality (and variety) plays a more crucial role than data quantity in both data construction and fine-tuning phases, given the intricate nature of function calling tasks.
 
+![Performance comparison across different model sizes, showing that larger models demonstrate substantially better function calling capabilities after fine-tuning, while base models show minimal function calling abilities regardless of scale.](./figures/model_comparison_q.jpg)
+
+Based on practical implementations, we emphasize that data quality (and variety) plays a more crucial role than data quantity in both data construction and fine-tuning phases, given the intricate nature of function calling tasks.
+
+
 | Emphasis | Description |
 |----------|-------------|
 | Data Quality | Prioritizing dataset diversity and verification over quantity for more robust function calling capabilities |
