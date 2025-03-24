@@ -203,66 +203,104 @@ Please cite our survey paper if this index is helpful:
 | Task proposal | [Proposer-Agent-Evaluator (PAE): Autonomous Skill Discovery For Foundation Model Internet Agents](https://arxiv.org/abs/2412.13194) (Zhou et al., 2024) | arXiv | [Code](https://github.com/LifeLongTeam/pae-autonomous-skill-discovery) | Automated task proposal and execution validation |
 | Experience transfer | [X-TOOLS: Tool Generation and Adaptation from Existing APIs for Dialogue Agents](https://arxiv.org/abs/2311.09562) (Patil et al., 2023) | arXiv | [Code](https://github.com/X-PLUG/X-TOOLS) | Transfers API experience across different domains |
 
-### Function Mapping
-| Approach | Paper | Code | Comment |
-|----------|-------|------|---------|
-| Rule-based Resolution | [Deterministic coreference resolution based on entity-centric, precision-ranked rules](https://aclanthology.org/J13-4004/) (Lee et al., 2013) | [Code](https://github.com/huggingface/neuralcoref) | Predefined mapping rules for contextual references |
-| Rule-based Resolution | [End-to-end neural entity linking](https://aclanthology.org/J19-1044/) (Kolitsas et al., 2018) | [Code](https://github.com/dalab/end2end_neural_el) | Neural approach to entity linking with rule-based components |
-| Knowledge Reasoning | [Knowledge-aware Pronoun Coreference Resolution](https://aclanthology.org/P19-1081/) (Zhang et al., 2019) | - | Leverages knowledge graphs for reference resolution |
-| LLM Mapping | [End-to-end Neural Coreference Resolution](https://aclanthology.org/D17-1018/) (Lee et al., 2017) | [Code](https://github.com/kentonl/e2e-coref) | Uses neural models for contextual mapping |
-| Dictionary Mapping | [Syllabus: Portable Curricula for Reinforcement Learning Agents](https://arxiv.org/abs/2411.11318) (Sullivan et al., 2024) | [Code](https://github.com/rsullivan00/syllabus) | Unified APIs and format alignment mechanisms |
-| Semantic Matching | [Improving Semantic Similarity for Low-Resource Named Entity Linking](https://arxiv.org/abs/2203.00778) (Niu et al., 2022) | [Code](https://github.com/HLTCHKUST/semnet) | Vector-based semantic similarity for linking entities |
-| Normalization | - | - | Format standardization for consistent representation |
-| Parameter Checking | - | - | Verification of parameter completeness and formatting |
-| Value Enumeration | - | - | Validating input values against acceptable ranges |
-| Permission Management | - | - | Ensuring appropriate access levels for function execution |
+### Function Mapping (§4.4)
 
-### Response Generation
+#### Resolution
 | Approach | Paper | Code | Comment |
 |----------|-------|------|---------|
-| Placeholder Results | [Toolkengpt: Augmenting frozen language models with massive tools via tool embeddings](https://arxiv.org/abs/2305.11554) (Hao et al., 2024) | [Code](https://github.com/ryoungj/ToolkenGPT) | Generated placeholders replaced with API call results |
-| Placeholder Results | [Large language models encode clinical knowledge](https://www.nature.com/articles/s41586-023-06291-2) (Singhal et al., 2023) | - | Domain-specific placeholder generation for clinical applications |
-| Placeholder Results | [Toolformer: Language models can teach themselves to use tools](https://arxiv.org/abs/2302.04761) (Schick et al., 2023) | [Code](https://github.com/lucidrains/toolformer-pytorch) | Self-supervised approach to result placeholder generation |
-| Function Unpredictability | [React: Synergizing reasoning and acting in language models](https://arxiv.org/abs/2210.03629) (Yao et al., 2023) | [Code](https://github.com/ysymyth/ReAct) | Reasoning-action interleaving to handle unpredictable outputs |
-| Structure Format | [Gorilla: Large language model connected with massive apis](https://arxiv.org/abs/2305.15334) (Patil et al., 2023) | [Code](https://github.com/ShishirPatil/gorilla) | Structured templates for consistent output formatting |
-| Structure Format | [Prompt2model: Generating deployable models from natural language instructions](https://arxiv.org/abs/2308.12667) (Pryzant et al., 2023) | - | Transforms natural language into structured model specifications |
+| Rule-based | [Deterministic coreference resolution based on entity-centric, precision-ranked rules](https://aclanthology.org/J13-4004/) (Lee et al., 2013) | [Code](https://github.com/huggingface/neuralcoref) | Predefined mapping rules for contextual references |
+| Rule-based | [End-to-end neural entity linking](https://aclanthology.org/J19-1044/) (Kolitsas et al., 2018) | [Code](https://github.com/dalab/end2end_neural_el) | Neural approach to entity linking with rule-based components |
+| Knowledge reasoning | [Knowledge-aware Pronoun Coreference Resolution](https://aclanthology.org/P19-1081/) (Zhang et al., 2019) | - | Leverages knowledge graphs for reference resolution |
+| LLM mapping | [End-to-end Neural Coreference Resolution](https://aclanthology.org/D17-1018/) (Lee et al., 2017) | [Code](https://github.com/kentonl/e2e-coref) | Uses neural models for contextual mapping |
+
+#### Alignment
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Dictionary mapping | [Syllabus: Portable Curricula for Reinforcement Learning Agents](https://arxiv.org/abs/2411.11318) (Sullivan et al., 2024) | [Code](https://github.com/rsullivan00/syllabus) | Unified APIs and format alignment mechanisms |
+| Semantic matching | [Improving Semantic Similarity for Low-Resource Named Entity Linking](https://arxiv.org/abs/2203.00778) (Niu et al., 2022) | [Code](https://github.com/HLTCHKUST/semnet) | Vector-based semantic similarity for linking entities |
+| Normalization | - | - | Format standardization for consistent representation |
+
+#### Validation
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Parameter checking | - | - | Verification of parameter completeness and formatting |
+| Value enumeration | - | - | Validating input values against acceptable ranges |
+| Permission management | - | - | Ensuring appropriate access levels for function execution |
+
+### Response Generation (§4.5)
+
+#### Initial Generation
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Placeholder results | [Toolkengpt: Augmenting frozen language models with massive tools via tool embeddings](https://arxiv.org/abs/2305.11554) (Hao et al., 2024) | [Code](https://github.com/ryoungj/ToolkenGPT) | Generated placeholders replaced with API call results |
+| Placeholder results | [Large language models encode clinical knowledge](https://www.nature.com/articles/s41586-023-06291-2) (Singhal et al., 2023) | - | Domain-specific placeholder generation for clinical applications |
+| Placeholder results | [Toolformer: Language models can teach themselves to use tools](https://arxiv.org/abs/2302.04761) (Schick et al., 2023) | [Code](https://github.com/lucidrains/toolformer-pytorch) | Self-supervised approach to result placeholder generation |
+| Function unpredictability | [React: Synergizing reasoning and acting in language models](https://arxiv.org/abs/2210.03629) (Yao et al., 2023) | [Code](https://github.com/ysymyth/ReAct) | Reasoning-action interleaving to handle unpredictable outputs |
+
+#### Templates
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Structure format | [Gorilla: Large language model connected with massive apis](https://arxiv.org/abs/2305.15334) (Patil et al., 2023) | [Code](https://github.com/ShishirPatil/gorilla) | Structured templates for consistent output formatting |
+| Structure format | [Prompt2model: Generating deployable models from natural language instructions](https://arxiv.org/abs/2308.12667) (Pryzant et al., 2023) | - | Transforms natural language into structured model specifications |
 | Formatting | [The api bank: A comprehensive benchmark for tool-augmented llms](https://arxiv.org/abs/2304.08244) (Li et al., 2023) | [Code](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank) | Standardized formatting for API responses |
 | Signatures | [Instance-wise prompting for few-shot transferability of large language models](https://arxiv.org/abs/2401.04997) (Pan et al., 2024) | [Code](https://github.com/apple/ml-instance-wise-prompting) | Instance-specific signature generation |
+
+#### Review
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
 | Validation | [Prompt2model: Generating deployable models from natural language instructions](https://arxiv.org/abs/2308.12667) (Pryzant et al., 2023) | - | Validation mechanisms for generated model specifications |
 | Validation | [T-eval: Evaluating the tool utilization capability of large language models step by step](https://aclanthology.org/2024.acl-long.591/) (Chen et al., 2024) | [Code](https://github.com/open-compass/T-Eval) | Step-by-step validation of tool utilization |
-| Agent Correction | [Learning to use tools via cooperative and interactive agents](https://arxiv.org/abs/2403.03031) (Shi et al., 2024) | [Code](https://github.com/RUC-GSAI/LLM-CU) | Specialized agents review and correct each other's actions |
-| Agent Correction | [Self-correction of large language models via cognitive psychology](https://ojs.aaai.org/index.php/AAAI/article/view/29868) (Sun et al., 2024) | - | Psychological principles for improved self-correction |
+| Agent correction | [Learning to use tools via cooperative and interactive agents](https://arxiv.org/abs/2403.03031) (Shi et al., 2024) | [Code](https://github.com/RUC-GSAI/LLM-CU) | Specialized agents review and correct each other's actions |
+| Agent correction | [Self-correction of large language models via cognitive psychology](https://ojs.aaai.org/index.php/AAAI/article/view/29868) (Sun et al., 2024) | - | Psychological principles for improved self-correction |
 | Feedback | [Great principles for learning to use tools with llms](https://arxiv.org/abs/2402.04254) (Guo et al., 2024) | - | Principles for effective feedback incorporation |
 | Feedback | [WebGPT: Browser-assisted question-answering with human feedback](https://arxiv.org/abs/2112.09332) (Nakano et al., 2021) | - | Human feedback integration for improved web interactions |
 | Feedback | [WhiteboardAgent: Autonomous Multi-Step Visual Language Reasoning via Whiteboard Interaction](https://arxiv.org/abs/2405.08217) (Wang et al., 2024) | [Code](https://github.com/KwaiKEG/WhiteboardAgent) | Visual reasoning through whiteboard interaction feedback |
-| Example Retrieval | [ClusterLLM: Large Language Models as a Guide for Text Clustering](https://arxiv.org/abs/2307.09013) (Chen et al., 2023) | [Code](https://github.com/amazon-science/clustering-with-llms) | Clustered example retrieval for enhanced responses |
-| System Mapping | [A neural probabilistic model for entity disambiguation using multiple resources](https://arxiv.org/abs/1909.12739) (Agarwal et al., 2019) | - | Multi-resource entity disambiguation for system mapping |
-| System Mapping | [LLM+P: Empowering Large Language Models with Optimal Planning Proficiency](https://arxiv.org/abs/2304.11477) (Liu et al., 2023) | - | Planning-oriented mapping for systematic responses |
-| System Mapping | [Llm+p: Empowering large language models with planning capabilities in multi-scenario human-ai collaboration](https://ojs.aaai.org/index.php/AAAI/article/view/28778) (Ma et al., 2024) | - | Enhanced collaborative mapping between human inputs and AI responses |
-| System Mapping | [InstructExcel: A Benchmark for Natural Language Instructions in Excel](https://arxiv.org/abs/2301.07065) (Mao et al., 2023) | [Code](https://github.com/HFAiLab/InstructExcel) | Domain-specific mapping for spreadsheet operations |
-| System Mapping | [INSTRUCTION FOLLOWING EVALUATION BY PREDICTING HUMAN FEEDBACK](https://arxiv.org/abs/2310.16427) (Muennighoff et al., 2023) | [Code](https://github.com/huggingface/instruction-following-eval) | Human feedback-based mapping evaluation |
-| System Mapping | [Instance-wise prompting for few-shot transferability of large language models](https://arxiv.org/abs/2401.04997) (Pan et al., 2024) | [Code](https://github.com/apple/ml-instance-wise-prompting) | Instance-specific mapping mechanisms |
-| System Mapping | [Vipergpt: Visual inference via python execution for reasoning](https://arxiv.org/abs/2303.08128) (Suris et al., 2023) | [Code](https://github.com/cvlab-columbia/viper) | Python execution-based visual reasoning and mapping |
 
-### Memory Scheme
+#### RAG
 | Approach | Paper | Code | Comment |
 |----------|-------|------|---------|
-| Hierarchical Structure | [Memorybank: Enhancing large language models with long-term memory](https://ojs.aaai.org/index.php/AAAI/article/view/29545) (Zhong et al., 2024) | [Code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend) | Hierarchical storage with Ebbinghaus-inspired updating |
-| Task-related Symbolic Memory | [Zero-shot task-oriented dialogue in the wild](https://arxiv.org/abs/2301.09503) (Xie et al., 2023) | - | Specialized memory structures for dialogue-based tasks |
-| Three-layered Memory Architecture | [Longllms: Enabling language models to process long contexts by leveraging memory mechanisms](https://arxiv.org/abs/2401.07872) (Li et al., 2024) | [Code](https://github.com/hkust-nlp/longllms) | Working, episodic, and semantic memory layers |
-| Persistent Memory Stream | [Unleashing infinite-length input capacity for large-scale language models with self-controlled memory system](https://arxiv.org/abs/2304.10203) (Liang et al., 2023) | - | Continuous memory stream for unlimited context |
-| Self-controlled Memory Mechanism | [Unleashing infinite-length input capacity for large-scale language models with self-controlled memory system](https://arxiv.org/abs/2304.10203) (Liang et al., 2023) | - | Memory management through control systems |
-| Memory Control System | [Unleashing infinite-length input capacity for large-scale language models with self-controlled memory system](https://arxiv.org/abs/2304.10203) (Liang et al., 2023) | - | Automated memory control for extended contexts |
-| Memory Control System | [Memgpt: Towards llms as operating systems](https://arxiv.org/abs/2310.08560) (Chen et al., 2023) | [Code](https://github.com/cpacker/MemGPT) | Operating system-inspired memory management |
-| Multi-agent Experience Storage | [Lmrl: Learning multiagent reinforcement learning framework in a collaborative agent society](https://arxiv.org/abs/2402.09205) (Lee et al., 2024) | [Code](https://github.com/LMRL-Lab/lmrl) | Collaborative storage of multi-agent experiences |
-| Cross-conversation Memory Retrieval | [Memorybank: Enhancing large language models with long-term memory](https://ojs.aaai.org/index.php/AAAI/article/view/29545) (Zhong et al., 2024) | [Code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend) | Retrieval mechanisms spanning multiple conversations |
-| LSH-based Indexing Mechanism | [Memgpt: Towards llms as operating systems](https://arxiv.org/abs/2310.08560) (Chen et al., 2023) | [Code](https://github.com/cpacker/MemGPT) | Locality-sensitive hashing for efficient indexing |
-| Similarity-based Retrieval | [Synapse: Trajectory-as-exemplar prompting with memory for computer control](https://arxiv.org/abs/2310.15142) (Zheng et al., 2023) | [Code](https://github.com/microsoft/Synapse) | Vector similarity for contextual memory access |
-| Efficient Memory Access | [Think-in-memory: Recalling and post-thinking enable llms with long-term memory](https://arxiv.org/abs/2311.08719) (Liu et al., 2023) | [Code](https://github.com/microsoft/ThinkInMemory) | Optimized access patterns for memory retrieval |
-| Thought-based Memory Storage | [Think-in-memory: Recalling and post-thinking enable llms with long-term memory](https://arxiv.org/abs/2311.08719) (Liu et al., 2023) | [Code](https://github.com/microsoft/ThinkInMemory) | Stores and recalls thoughts rather than raw conversations |
-| Trajectory-as-exemplar Framework | [Synapse: Trajectory-as-exemplar prompting with memory for computer control](https://arxiv.org/abs/2310.15142) (Zheng et al., 2023) | [Code](https://github.com/microsoft/Synapse) | Complete trajectories as exemplars for planning |
-| State Abstraction Mechanism | [Synapse: Trajectory-as-exemplar prompting with memory for computer control](https://arxiv.org/abs/2310.15142) (Zheng et al., 2023) | [Code](https://github.com/microsoft/Synapse) | Compact state representations for efficient storage |
-| Knowledge Triplet | [Memgpt: Towards llms as operating systems](https://arxiv.org/abs/2310.08560) (Chen et al., 2023) | [Code](https://github.com/cpacker/MemGPT) | Subject-predicate-object triplets for structured knowledge |
+| Example retrieval | [ClusterLLM: Large Language Models as a Guide for Text Clustering](https://arxiv.org/abs/2307.09013) (Chen et al., 2023) | [Code](https://github.com/amazon-science/clustering-with-llms) | Clustered example retrieval for enhanced responses |
+| System mapping | [A neural probabilistic model for entity disambiguation using multiple resources](https://arxiv.org/abs/1909.12739) (Agarwal et al., 2019) | - | Multi-resource entity disambiguation for system mapping |
+| System mapping | [LLM+P: Empowering Large Language Models with Optimal Planning Proficiency](https://arxiv.org/abs/2304.11477) (Liu et al., 2023) | - | Planning-oriented mapping for systematic responses |
+| System mapping | [Llm+p: Empowering large language models with planning capabilities in multi-scenario human-ai collaboration](https://ojs.aaai.org/index.php/AAAI/article/view/28778) (Ma et al., 2024) | - | Enhanced collaborative mapping between human inputs and AI responses |
+| System mapping | [InstructExcel: A Benchmark for Natural Language Instructions in Excel](https://arxiv.org/abs/2301.07065) (Mao et al., 2023) | [Code](https://github.com/HFAiLab/InstructExcel) | Domain-specific mapping for spreadsheet operations |
+| System mapping | [INSTRUCTION FOLLOWING EVALUATION BY PREDICTING HUMAN FEEDBACK](https://arxiv.org/abs/2310.16427) (Muennighoff et al., 2023) | [Code](https://github.com/huggingface/instruction-following-eval) | Human feedback-based mapping evaluation |
+| System mapping | [Instance-wise prompting for few-shot transferability of large language models](https://arxiv.org/abs/2401.04997) (Pan et al., 2024) | [Code](https://github.com/apple/ml-instance-wise-prompting) | Instance-specific mapping mechanisms |
+| System mapping | [Vipergpt: Visual inference via python execution for reasoning](https://arxiv.org/abs/2303.08128) (Suris et al., 2023) | [Code](https://github.com/cvlab-columbia/viper) | Python execution-based visual reasoning and mapping |
+
+### Memory Scheme (§4.6)
+
+#### Memory Structure
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Hierarchical structure and storage | [Memorybank: Enhancing large language models with long-term memory](https://ojs.aaai.org/index.php/AAAI/article/view/29545) (Zhong et al., 2024) | [Code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend) | Hierarchical storage with Ebbinghaus-inspired updating |
+| Task-related symbolic memory | [Zero-shot task-oriented dialogue in the wild](https://arxiv.org/abs/2301.09503) (Xie et al., 2023) | - | Specialized memory structures for dialogue-based tasks |
+| Three-layered memory architecture | [Longllms: Enabling language models to process long contexts by leveraging memory mechanisms](https://arxiv.org/abs/2401.07872) (Li et al., 2024) | [Code](https://github.com/hkust-nlp/longllms) | Working, episodic, and semantic memory layers |
+| Persistent memory stream | [Unleashing infinite-length input capacity for large-scale language models with self-controlled memory system](https://arxiv.org/abs/2304.10203) (Liang et al., 2023) | - | Continuous memory stream for unlimited context |
+
+#### Memory Management
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Self-controlled memory mechanism | [Unleashing infinite-length input capacity for large-scale language models with self-controlled memory system](https://arxiv.org/abs/2304.10203) (Liang et al., 2023) | - | Memory management through control systems |
+| Memory control system | [Unleashing infinite-length input capacity for large-scale language models with self-controlled memory system](https://arxiv.org/abs/2304.10203) (Liang et al., 2023) | - | Automated memory control for extended contexts |
+| Memory control system | [Memgpt: Towards llms as operating systems](https://arxiv.org/abs/2310.08560) (Chen et al., 2023) | [Code](https://github.com/cpacker/MemGPT) | Operating system-inspired memory management |
+| Multi-agent experience storage | [Lmrl: Learning multiagent reinforcement learning framework in a collaborative agent society](https://arxiv.org/abs/2402.09205) (Lee et al., 2024) | [Code](https://github.com/LMRL-Lab/lmrl) | Collaborative storage of multi-agent experiences |
+
+#### Memory Retrieval
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Cross-conversation memory retrieval | [Memorybank: Enhancing large language models with long-term memory](https://ojs.aaai.org/index.php/AAAI/article/view/29545) (Zhong et al., 2024) | [Code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend) | Retrieval mechanisms spanning multiple conversations |
+| LSH-based indexing mechanism | [Memgpt: Towards llms as operating systems](https://arxiv.org/abs/2310.08560) (Chen et al., 2023) | [Code](https://github.com/cpacker/MemGPT) | Locality-sensitive hashing for efficient indexing |
+| Similarity-based retrieval | [Synapse: Trajectory-as-exemplar prompting with memory for computer control](https://arxiv.org/abs/2310.15142) (Zheng et al., 2023) | [Code](https://github.com/microsoft/Synapse) | Vector similarity for contextual memory access |
+| Efficient memory access | [Think-in-memory: Recalling and post-thinking enable llms with long-term memory](https://arxiv.org/abs/2311.08719) (Liu et al., 2023) | [Code](https://github.com/microsoft/ThinkInMemory) | Optimized access patterns for memory retrieval |
+
+#### Memory Processing
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Thought-based memory storage | [Think-in-memory: Recalling and post-thinking enable llms with long-term memory](https://arxiv.org/abs/2311.08719) (Liu et al., 2023) | [Code](https://github.com/microsoft/ThinkInMemory) | Stores and recalls thoughts rather than raw conversations |
+| Trajectory-as-exemplar framework | [Synapse: Trajectory-as-exemplar prompting with memory for computer control](https://arxiv.org/abs/2310.15142) (Zheng et al., 2023) | [Code](https://github.com/microsoft/Synapse) | Complete trajectories as exemplars for planning |
+| State abstraction mechanism | [Synapse: Trajectory-as-exemplar prompting with memory for computer control](https://arxiv.org/abs/2310.15142) (Zheng et al., 2023) | [Code](https://github.com/microsoft/Synapse) | Compact state representations for efficient storage |
+| Knowledge triplet | [Memgpt: Towards llms as operating systems](https://arxiv.org/abs/2310.08560) (Chen et al., 2023) | [Code](https://github.com/cpacker/MemGPT) | Subject-predicate-object triplets for structured knowledge |
 
 ## Evaluation
 
