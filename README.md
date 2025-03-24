@@ -112,7 +112,7 @@ Please cite our survey paper if this index is helpful:
 
 ## Deployment and Inference
 
-![Figure 6: A Typical Deployment of LLM for Function Calling Stages: The Flow through Input Construction, Memory Integration, and Output Format Validation (Function Execution). Note that actual implementations may vary in practice.](./figures/deployment.pdf)
+![Figure 6: A Typical Deployment of LLM for Function Calling Stages: The Flow through Input Construction, Memory Integration, and Output Format Validation (Function Execution). Note that actual implementations may vary in practice.](./figures/deployment.jpg)
 
 After constructing the sample and fine-tuning the large model, this section examines common deployment approaches that implement the three-stage pipeline (pre-call, on-call, post-call) outlined in Section 2. The deployment process for function-calling LLMs typically involves multiple inference steps aligned with these stages. While some implementations include an initial inference step for query understanding and decomposition using an intent model, this preprocessing phase continues to evolve in industrial applications and represents an area for future exploration.
 
