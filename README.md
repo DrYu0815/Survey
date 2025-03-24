@@ -56,7 +56,7 @@ Please cite our survey paper if this index is helpful:
 | Challenge 4.2: Irrelevant Information Overload | Excessive irrelevant information in function outputs |
 | Challenge 4.3: Mismatch Between Real-World Functions and Results | Gap between LLM-generated outputs and executable code |
 | Challenge 4.4: Execution Failure | Functions failing despite correct triggering and parameterization |
-```
+
 
 ## Sample Construction and Fine-Tuning
 
