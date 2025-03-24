@@ -29,6 +29,11 @@ Please cite our survey paper if this index is helpful:
 - [Open Issues](#open-issues)
 
 
+![A comprehensive overview of the function calling system pipeline, showing the progression from natural language input through preprocessing, inference, and post-processing phases to executable function outputs.](./figures/overview.jpg)
+
+Function calling capabilities in LLMs follow a three-stage workflow consisting of pre-call processing, on-call execution, and post-call validation.
+
+
 ## Challenges
 
 ### Pre-call Stage
