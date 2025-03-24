@@ -183,15 +183,25 @@ Please cite our survey paper if this index is helpful:
 | Inner Thoughts | [Proactive Conversational Agents with Inner Thoughts](https://arxiv.org/abs/2501.00383) (Liu et al., 2024) | arXiv | [Code](https://github.com/hkust-nlp/PCA) | Continuous thought generation for proactive participation |
 
 ### Prompt Construction
+
+#### Few-shot Integration
 | Approach | Paper | Code | Comment |
 |----------|-------|------|---------|
-| Few-shot Integration | [Instance-wise prompting for few-shot transferability of large language models](https://arxiv.org/abs/2401.04997) (Pan et al., 2024) | [Code](https://github.com/apple/ml-instance-wise-prompting) | Example demonstrations for transferable few-shot learning |
-| Few-shot Integration | [Nexusraven: a commercially-permissive language model for function calling](https://arxiv.org/abs/2311.11981) (Srinivasan et al., 2023) | [Code](https://github.com/nexusflow/NexusRaven) | Utilizes four-shot prompting for API function integration |
-| Context Management | [Function definitions for improved tool use](https://arxiv.org/abs/2311.09484) (Patwardhan et al., 2023) | - | Structured function definition formats optimized for LLM processing |
-| Context Management | [Docstrings for LLM: Enhancing API Function Calling with Descriptive Docstrings](https://arxiv.org/abs/2403.16354) (Cai et al., 2024) | - | Leverages comprehensive docstrings to improve function comprehension |
-| Context Management | [Chain-of-thought prompting elicits reasoning in large language models](https://arxiv.org/abs/2201.11903) (Wei et al., 2022) | - | Step-by-step reasoning for complex function operations |
-| Query-based Retrieval | [Learning to Ask: When LLMs Meet Unclear Instruction](https://arxiv.org/abs/2409.00557) (Wang et al., 2024) | [Code](https://github.com/CAISA-Lab/UnclearInstrLearningToAsk) | Encourages proactive question-asking before API calls |
-| Query-based Retrieval | [Interactive refinement of function calls with large language models](https://arxiv.org/abs/2305.14459) (Lee et al., 2023) | - | Iterative feedback mechanisms for parameter refinement |
+| Example demonstrations | [Instance-wise prompting for few-shot transferability of large language models](https://arxiv.org/abs/2401.04997) (Pan et al., 2024) | [Code](https://github.com/apple/ml-instance-wise-prompting) | Tailored examples for improved function understanding |
+| Four-shot prompting | - | - | Demonstrated optimal number of examples for tool usage |
+
+#### Context Management
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Function definitions | - | - | Including comprehensive function specifications in context |
+| Docstrings | - | - | Utilizing standardized documentation formats for clarity |
+| Chain-of-thought | [Chain-of-thought prompting elicits reasoning in large language models](https://arxiv.org/abs/2201.11903) (Wei et al., 2022) | - | Step-by-step reasoning process for complex function selection |
+
+#### Query-based Retrieval
+| Approach | Paper | Code | Comment |
+|----------|-------|------|---------|
+| Ask-when-Needed | [Learning to Ask: When LLMs Meet Unclear Instruction](https://arxiv.org/abs/2409.00557) (Wang et al., 2024) | [Code](https://github.com/CAISA-Lab/UnclearInstrLearningToAsk) | On-demand clarification for tool selection |
+| Interactive refinement | - | - | Iterative query refinement through user interaction |
 
 ### Function Generation
 | Approach | Paper | Venue | Code | Comment |
