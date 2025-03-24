@@ -1,4 +1,5 @@
 ## Table of Contents
+## Table of Contents
 
 - [Toolboxes](#toolboxes)
 - [Function Calling Pipeline and Challenges](#function-calling-pipeline-and-challenges)
